@@ -40,23 +40,22 @@ form{
 }
 
 .contendor div{
-    width: 400px;
-    height: 300px;
-    box-shadow: 5px 2px 3px 7px black;
-    border-radius: 10px;
-    background-color: LightGray;
+    width: 450px;
+    height: 350px;
+    box-shadow: 5px 2px 3px 5px black;
+    border-radius: 5px;
+    background-color: cornflowerblue;
 
-    margin: 7px;
+    margin: 2px;
 
 }
 
 .submit{
     margin-top: 20px;
-    background-image: url("../images/sax.png");
     text-decoration: none;
     border: 2px solid transparent;
     font-weight: bold;
-    padding: 10px 25px;
+    padding: 5px 5px;
     border-radius: 30px;
     transition: transform .5s;
 }
@@ -68,12 +67,12 @@ form{
 
 .contendor .post2{
     height: 500px;
-    width: 1000px;
+    width: 1050px;
 
 }
 
 .contendor .post{
     height: 520px;
-    width: 480px;
+    width: 500px;
     margin-left: 50%;
 }
