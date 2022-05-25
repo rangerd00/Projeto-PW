@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formação</title>
+</head>
+<body>
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+
+
+            {%  load static %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/formacao.css' %}"/>
+
+
+
+
+
+    <br>
+    <br>
+    <div class="centrar">
+
+     <a class="linkz" href="{% url 'portfolio:educacao' %}">Educação</a>
+      <a   class="linkz" href="{% url 'portfolio:licenciatura' %}">Licenciatura</a>
+    </div>
+
+    <div>
+   {%  load static %}
+
+     <a class="centrar2"  href="{% url 'portfolio:educacao' %}">
+
+        <img  src="{% static "portfolio/images/education-illustration.png" %}" alt="home" /> </a>
+
+        {%  load static %} <a  class="centrar"  href="{% url 'portfolio:licenciatura' %}">  <img style="padding-left: 30px" src="{% static "portfolio/images/high-resolution-graduation-cap-png-icon-17.png" %}" alt="home" /> </a>
+
+
+
+
+    </div>
+
+
+
+
+
+
+{% endblock %}
+
+
+</body>
+</html>

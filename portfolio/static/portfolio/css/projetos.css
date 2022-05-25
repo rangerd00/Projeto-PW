@@ -1,0 +1,114 @@
+.container {
+
+  display: flex;
+
+    background-image: url('../images/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg');
+   flex-wrap: wrap;
+
+
+
+
+        min-height: 300px;
+
+
+      justify-content:center;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+
+}
+
+
+.container2 {
+position: relative;
+  display: flex;
+align-content: center;
+        min-height: 300px;
+
+    background-image: url('../images/fabio-oyXis2kALVg-unsplash.jpg');
+   flex-wrap: wrap;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+
+}
+
+.container2 div{
+
+          width: 450px;
+    height: 450px;
+    box-shadow: 5px 5px 15px #888888;
+            border-radius: 12px;
+            padding: 10px 20px;
+            background-color: lightcyan;
+            margin: 25px;
+         align-items: center;
+    flex-wrap: wrap;
+     justify-content: space-around;
+
+
+}
+
+.container  div {
+      width: 450px;
+    height: 450px;
+    box-shadow: 5px 5px 15px #888888;
+            border-radius: 12px;
+            padding: 10px 20px;
+            background-color: lightcyan;
+            margin: 25px;
+         align-items: center;
+    flex-wrap: wrap;
+     justify-content: space-around;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+main {
+  height: 50vh;
+  background-color:rgb(238, 248, 248);
+  padding: 4em 4em;
+}
+
+.tab {
+ margin-left: 2.5em
+}
+
+.parallax{
+      min-height: 200px;
+    display: flex;
+     flex-wrap: wrap;
+
+      justify-content:center;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+

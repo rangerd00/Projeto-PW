@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'portfolio/layout.html' %}
+<head>
+    <meta charset="UTF-8">
+    <title>Licenciatura</title>
+</head>
+
+
+<body>
+
+
+
+{% block main %}
+
+        {%  load static %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/licenciatura.css' %}"/>
+
+
+
+    <h1  style="text-align:center"  >Licenciatura</h1>
+       <h2  style="text-align:center"  >Plano Estudos</h2>
+
+
+
+<div class="container" >
+
+
+   <h1  class="centrarTexto" >1º Ano | 1º Semestre </h1>
+
+
+{% for unidadecurricular in unidades_curriculars  %}
+    {% if unidadecurricular.ano == 1 and unidadecurricular.semestre == "1º" %}
+  <div>
+
+
+    <h3 style="margin-bottom:0.30cm;" >
+        {{ unidadecurricular.titulo }}
+    </h3>
+
+
+
+    <h4 style="margin-bottom:0.30cm;" >
+          Ano:
+        {{ unidadecurricular.ano }}
+    </h4>
+
+          <h4 style="margin-bottom:0.30cm;" >
+               Semestre:
+        {{ unidadecurricular.semestre }}
+    </h4>
+
+
+
+    <h4 style="margin-bottom:0.20cm;">Topicos:
+        <br>
+        <br>
+        <p>
+
+{{ unidadecurricular.topicos }}
+        </p>
+    </h4>
+
+
+
+ </h4>
+
+    {% for profs in unidadecurricular.professores.all %}
+       <h4 style="margin-bottom:0.20cm;">Professores:
+       <ul>
+
+           <a href="{{ profs.linkedin }}" target="_blank">
+           <lu> {{ profs }}</lu>
+                  </a>
+
+       </ul>
+
+
+       </h4>
+                   {% endfor %}
+
+      <h4 style="margin-bottom:0.20cm;">
+     <a href="{{ unidadecurricular.linkUC }}" target="_blank">
+          Link UC
+      </a>
+
+
+
+      </h4>
+
+        {% for projetosRealizados in unidadecurricular.projetos.all %}
+
+    <h4 style="margin-bottom:0.20cm;">Projetos Realizados: <a href="{{ projetosRealizados.github }}" target="_blank">{{ projetosRealizados  }}</a> </h4>
+
+
+       {% endfor %}
+
+
+
+
+  </div>
+
+      {% endif %}
+
+   {% endfor %}
+
+
+      <h1 class="centrarTexto" >1º Ano | 2º Semestre </h1>
+
+
+
+
+{% for unidadecurricular in unidades_curriculars  %}
+    {% if unidadecurricular.ano == 1 and unidadecurricular.semestre == "2º" %}
+  <div>
+
+
+    <h3 style="margin-bottom:0.30cm;" >
+        {{ unidadecurricular.titulo }}
+    </h3>
+
+
+
+    <h4 style="margin-bottom:0.30cm;" >
+        Ano:
+        {{ unidadecurricular.ano }}
+    </h4>
+
+          <h4 style="margin-bottom:0.30cm;" >
+              Semestre:
+        {{ unidadecurricular.semestre }}
+    </h4>
+
+
+
+    <h4 style="margin-bottom:0.20cm;">Topicos:
+        <br>
+        <br>
+        <p>
+
+{{ unidadecurricular.topicos }}
+        </p>
+    </h4>
+
+
+
+ </h4>
+
+    {% for profs in unidadecurricular.professores.all %}
+       <h4 style="margin-bottom:0.20cm;">Professores:
+       <ul>
+
+           <a href="{{ profs.linkedin }}" target="_blank">
+           <lu> {{ profs }}</lu>
+                  </a>
+
+       </ul>
+
+
+       </h4>
+                   {% endfor %}
+
+      <h4 style="margin-bottom:0.20cm;">
+     <a href="{{ unidadecurricular.linkUC }}" target="_blank">
+          Link UC
+      </a>
+
+
+
+      </h4>
+
+        {% for projetosRealizados in unidadecurricular.projetos.all %}
+
+    <h4 style="margin-bottom:0.20cm;">Projetos Realizados: <a href="{{ projetosRealizados.github }}" target="_blank">{{ projetosRealizados  }}</a> </h4>
+
+
+       {% endfor %}
+
+
+
+
+  </div>
+
+      {% endif %}
+
+   {% endfor %}
+
+
+    <h1 class="centrarTexto" >2º Ano | 1º Semestre </h1>
+
+
+{% for unidadecurricular in unidades_curriculars  %}
+    {% if unidadecurricular.ano == 2 and unidadecurricular.semestre == "1º" %}
+  <div>
+
+
+    <h3 style="margin-bottom:0.30cm;" >
+        {{ unidadecurricular.titulo }}
+    </h3>
+
+
+
+    <h4 style="margin-bottom:0.30cm;" >
+        Ano:
+        {{ unidadecurricular.ano }}
+    </h4>
+
+          <h4 style="margin-bottom:0.30cm;" >
+              Semestre:
+        {{ unidadecurricular.semestre }}
+    </h4>
+
+
+
+    <h4 style="margin-bottom:0.20cm;">Topicos:
+        <br>
+        <br>
+        <p>
+
+{{ unidadecurricular.topicos }}
+        </p>
+    </h4>
+
+
+
+ </h4>
+
+    {% for profs in unidadecurricular.professores.all %}
+       <h4 style="margin-bottom:0.20cm;">Professores:
+       <ul>
+
+           <a href="{{ profs.linkedin }}" target="_blank">
+           <lu> {{ profs }}</lu>
+                  </a>
+
+       </ul>
+
+
+       </h4>
+                   {% endfor %}
+
+      <h4 style="margin-bottom:0.20cm;">
+     <a href="{{ unidadecurricular.linkUC }}" target="_blank">
+          Link UC
+      </a>
+
+
+
+      </h4>
+
+        {% for projetosRealizados in unidadecurricular.projetos.all %}
+
+    <h4 style="margin-bottom:0.20cm;">Projetos Realizados: <a href="{{ projetosRealizados.github }}" target="_blank">{{ projetosRealizados  }}</a> </h4>
+
+
+       {% endfor %}
+
+
+
+
+  </div>
+
+      {% endif %}
+
+   {% endfor %}
+
+
+
+       <h1 class="centrarTexto" >2º Ano | 2º Semestre </h1>
+
+{% for unidadecurricular in unidades_curriculars  %}
+    {% if unidadecurricular.ano == 2 and unidadecurricular.semestre == "2º" %}
+  <div>
+
+
+    <h3 style="margin-bottom:0.30cm;" >
+        {{ unidadecurricular.titulo }}
+    </h3>
+
+
+
+    <h4 style="margin-bottom:0.30cm;" >
+        Ano:
+        {{ unidadecurricular.ano }}
+    </h4>
+
+          <h4 style="margin-bottom:0.30cm;" >
+              Semestre:
+        {{ unidadecurricular.semestre }}
+    </h4>
+
+
+
+    <h4 style="margin-bottom:0.20cm;">Topicos:
+        <br>
+        <br>
+        <p>
+
+{{ unidadecurricular.topicos }}
+        </p>
+    </h4>
+
+
+
+ </h4>
+
+    {% for profs in unidadecurricular.professores.all %}
+       <h4 style="margin-bottom:0.20cm;">Professores:
+       <ul>
+
+           <a href="{{ profs.linkedin }}" target="_blank">
+           <lu> {{ profs }}</lu>
+                  </a>
+
+       </ul>
+
+
+       </h4>
+                   {% endfor %}
+
+      <h4 style="margin-bottom:0.20cm;">
+     <a href="{{ unidadecurricular.linkUC }}" target="_blank">
+          Link UC
+      </a>
+
+
+
+      </h4>
+
+        {% for projetosRealizados in unidadecurricular.projetos.all %}
+
+    <h4 style="margin-bottom:0.20cm;">Projetos Realizados: <a href="{{ projetosRealizados.github }}" target="_blank">{{ projetosRealizados  }}</a> </h4>
+
+
+       {% endfor %}
+
+
+
+
+  </div>
+
+      {% endif %}
+
+   {% endfor %}
+
+
+
+
+
+ <h1 class="centrarTexto" >3º Ano | 1º Semestre </h1>
+
+{% for unidadecurricular in unidades_curriculars  %}
+    {% if unidadecurricular.ano == 3 and unidadecurricular.semestre == "1º" %}
+  <div>
+
+
+    <h3 style="margin-bottom:0.30cm;" >
+        {{ unidadecurricular.titulo }}
+    </h3>
+
+
+
+    <h4 style="margin-bottom:0.30cm;" >
+        Ano:
+        {{ unidadecurricular.ano }}
+    </h4>
+
+          <h4 style="margin-bottom:0.30cm;" >
+              Semestre:
+        {{ unidadecurricular.semestre }}
+    </h4>
+
+
+
+    <h4 style="margin-bottom:0.20cm;">Topicos:
+        <br>
+        <br>
+        <p>
+
+{{ unidadecurricular.topicos }}
+        </p>
+    </h4>
+
+
+
+ </h4>
+
+    {% for profs in unidadecurricular.professores.all %}
+       <h4 style="margin-bottom:0.20cm;">Professores:
+       <ul>
+
+           <a href="{{ profs.linkedin }}" target="_blank">
+           <lu> {{ profs }}</lu>
+                  </a>
+
+       </ul>
+
+
+       </h4>
+                   {% endfor %}
+
+      <h4 style="margin-bottom:0.20cm;">
+     <a href="{{ unidadecurricular.linkUC }}" target="_blank">
+          Link UC
+      </a>
+
+
+
+      </h4>
+
+        {% for projetosRealizados in unidadecurricular.projetos.all %}
+
+    <h4 style="margin-bottom:0.20cm;">Projetos Realizados: <a href="{{ projetosRealizados.github }}" target="_blank">{{ projetosRealizados  }}</a> </h4>
+
+
+       {% endfor %}
+
+
+
+
+  </div>
+
+      {% endif %}
+
+   {% endfor %}
+
+
+ <h1 class="centrarTexto" >3º Ano | 2º Semestre </h1>
+
+
+{% for unidadecurricular in unidades_curriculars  %}
+    {% if unidadecurricular.ano == 3 and unidadecurricular.semestre == "2º" %}
+  <div>
+
+
+    <h3 style="margin-bottom:0.30cm;" >
+        {{ unidadecurricular.titulo }}
+    </h3>
+
+
+
+    <h4 style="margin-bottom:0.30cm;" >
+        Ano:
+        {{ unidadecurricular.ano }}
+    </h4>
+
+          <h4 style="margin-bottom:0.30cm;" >
+              Semestre:
+        {{ unidadecurricular.semestre }}
+    </h4>
+
+
+
+    <h4 style="margin-bottom:0.20cm;">Topicos:
+        <br>
+        <br>
+        <p>
+
+{{ unidadecurricular.topicos }}
+        </p>
+    </h4>
+
+
+
+ </h4>
+
+    {% for profs in unidadecurricular.professores.all %}
+       <h4 style="margin-bottom:0.20cm;">Professores:
+       <ul>
+
+           <a href="{{ profs.linkedin }}" target="_blank">
+           <lu> {{ profs }}</lu>
+                  </a>
+
+       </ul>
+
+
+       </h4>
+                   {% endfor %}
+
+      <h4 style="margin-bottom:0.20cm;">
+     <a href="{{ unidadecurricular.linkUC }}" target="_blank">
+          Link UC
+      </a>
+
+
+
+      </h4>
+
+        {% for projetosRealizados in unidadecurricular.projetos.all %}
+
+    <h4 style="margin-bottom:0.20cm;">Projetos Realizados: <a href="{{ projetosRealizados.github }}" target="_blank">{{ projetosRealizados  }}</a> </h4>
+
+
+       {% endfor %}
+
+
+
+
+  </div>
+
+      {% endif %}
+
+   {% endfor %}
+
+
+
+
+ </div>
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+* {padding: 0; margin: 0;}
+
+img *{
+  overflow: hidden;
+}
+
+
+
+
+
+        .container1 {
+position: absolute;
+            min-height: 500px;
+
+            background-image: url('../images/68747470733a2f2f692e696d6775722e636f6d2f315a76566b44632e676966 (1).gif');
+
+  background-position: center;
+  background-repeat: no-repeat;
+ width: 100%;
+    height: 100%;
+ padding-left: 50px;
+    padding-top: 75px;
+
+background-attachment: fixed;
+
+  background-size: cover;
+
+
+    top: 0;
+    left: 0;
+
+}
+.centrarContentor{
+  position: absolute;
+  left: 50%;
+  top: 20%;
+}
+
+
+.centrarContento2r{
+  position: absolute;
+  left: 5%;
+  top: 5%;
+}
+
+
+
+.titulo{
+      position: absolute;
+    top: 60px;
+    right: 270px;
+    color: white;
+    font-weight: bold;
+    font-size: 72px;
+
+
+
+}
+
+
+
+.titulo2{
+      position: absolute;
+    top: 200px;
+    right: 270px;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+
+
+}
+
+.parallax2{
+     background-image: url('../images/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg');
+ height: 3200px;
+    background-attachment: fixed;
+
+  background-size: cover;
+      background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.parallax3{
+     background-image: url('../images/3124512.jpg');
+ height: 2000px;
+        background-attachment: fixed;
+
+  background-size: cover;
+      background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+.backText{
+      position: relative;
+}
+.backText2{
+    position: relative;
+}
+
+.titulo3{
+      position: absolute;
+    top: 900px;
+    right: 270px;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+
+
+}
+.titulo4{
+          position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+
+}
+
+.centrartexto{
+        text-align: center;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
+    left: 0px;
+    margin-bottom: 20px;
+}
+
+.centrartexto2{
+        text-align: center;
+    vertical-align: center;
+    position: absolute;
+
+    margin-bottom: 20px;
+}
+
+
+.center {
+
+display: flex;
+justify-content: center;
+}
+
+
+
+
+/* Button */
+
+	input[type="button"],
+	input[type="submit"],
+	input[type="reset"],
+	button,
+	.button {
+		position: relative;
+		display: inline-block;
+		border-radius: 0.35em;
+		color: #fff !important;
+		text-decoration: none;
+		padding: 0.75em 2.5em 0.75em 2.5em;
+		background-color: #8ebebc;
+		border: 0;
+		cursor: pointer;
+		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("../images/overlay.png");
+		background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("../images/overlay.png");
+		background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("../images/overlay.png");
+		background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("../images/overlay.png");
+		-moz-transition: background-color 0.35s ease-in-out;
+		-webkit-transition: background-color 0.35s ease-in-out;
+		-ms-transition: background-color 0.35s ease-in-out;
+		transition: background-color 0.35s ease-in-out;
+        text-align: center;
+	}
+
+		input[type="button"]:hover,
+		input[type="submit"]:hover,
+		input[type="reset"]:hover,
+		button:hover,
+		.button:hover {
+			background-color: #9ececc;
+		}
+
+		input[type="button"]:active,
+		input[type="submit"]:active,
+		input[type="reset"]:active,
+		button:active,
+		.button:active {
+			background-color: #7eaeac;
+		}
+
+
+        .img {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+            margin-left: 30px;
+            padding-bottom: 30px;
+}
+
+
+        .img2 {
+
+
+            padding-bottom: 30px;
+
+             display: block;
+  margin: 0 auto;
+}
+
+
+        .card {
+  width: 550px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+
+
+
+
+

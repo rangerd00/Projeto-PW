@@ -1,0 +1,189 @@
+{% extends 'portfolio/layout.html' %}
+
+
+
+
+
+{% block main %}
+
+    {%  load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/web.css' %}"/>
+
+
+
+            <meta charset="UTF-8" name="viewport"  content="width=device-width,initial-scale=1.0
+">
+
+
+
+
+
+
+
+
+
+
+
+<div class="containerweb" >
+
+
+
+
+    <article class="titulo">  Programação Web
+
+    <a  class="linkz" href="{% url 'portfolio:quizz' %}" target="_blank">Quiz</a>
+
+<a  class="linkz" href="https://a22007457-pw-lab2.herokuapp.com" target="_blank">Labs</a>
+
+  <a  class="linkz" href="#C4" target="_blank">Notcias</a>
+
+
+
+    </article>
+<br>
+<br>
+
+<h1 class="centrartexto2"> Noticias</h1>
+
+
+
+    {%  for news in noticias %}
+<div>
+
+    <h3 > {{ news.titulo }}</h3>
+<br>
+    <p>
+{{ news.descricao }}
+    </p>
+    <br>
+
+     <img src="{{ news.imagem.url }}" alt="">
+    <br>
+    <br>
+
+<h3> <a href="{{ news.link }}"> Leia Aqui!</a></h3>
+
+</div>
+
+{% endfor %}
+
+
+
+<h2 CLASS="centrartexto2">Tecnologias:</h2>
+
+
+
+    {%  for tech in tecnologias %}
+<div>
+
+    <h3 > {{ tech.nome}}</h3>
+<br>
+    <h3>
+{{ tech.acronimo }}
+    </h3>
+ <br>
+    <h3 > {{ tech.ano}}</h3>
+
+    <br>
+
+       <p > {{ tech.caracteristicas}}</p>
+
+    <br>
+    <h3 > {{ tech.criador}}</h3>
+
+    <br>
+
+     <img src="{{ tech.logotipo.url }}" alt="">
+    <br>
+    <br>
+
+<h3> <a href="{{ tech.link }}"> Leia Aqui!</a></h3>
+
+</div>
+
+{% endfor %}
+
+
+
+<br>
+<br>
+
+    <br>
+<br>
+
+
+<h2 CLASS="centrartexto2">Exemplos Tecnicas:</h2>
+
+
+
+    {%  for tecnica in tecnicas %}
+<div >
+
+    <h3 > {{ tecnica.nome}}</h3>
+<br>
+
+    <br>
+    <br>
+
+        <img src="{{ tecnica.imagem.url }}" alt="">
+
+    <br>
+    <br>
+
+<h3> <a href="{{ tecnica.link }}"> Leia Mais Aqui!</a></h3>
+
+
+
+</div>
+
+{% endfor %}
+
+
+<h2 CLASS="centrartexto2">Padrões Usados:</h2>
+
+
+
+
+    {%  for padrao in padroes %}
+<div >
+
+    <h3 > {{ padrao.nome}}</h3>
+<br>
+    <p> {{ padrao.descricao }}</p>
+    <br>
+    <br>
+
+     <img src="{{ padrao.imagem.url }}" alt="">
+
+    <br>
+
+<h3> <a href="{{ padrao.link }}"> Leia Mais Aqui!</a></h3>
+
+</div>
+
+{% endfor %}
+
+  <h2 CLASS="centrartexto3">Diagrama E/R:</h2>
+<p class="centrartexto3"> Click na Imagem para Fazer Download</p>
+<a class="centrartexto2" href="../../static/portfolio/images/diagramaER.png" download>
+  <img  class="imagem" src="../../static/portfolio/images/diagramaER.png" alt="Diagrama ER" width="450" height="450">
+</a>
+
+
+
+
+
+
+ </div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

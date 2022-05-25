@@ -1,0 +1,109 @@
+.container {
+position: relative;
+  display: flex;
+align-content: center;
+        min-height: 300px;
+
+    background-image: url('../images/home-ce-610.jpg');
+   flex-wrap: wrap;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+
+}
+
+
+
+
+
+.container div{
+          width: 550px;
+    height: 600px;
+    box-shadow: 5px 5px 15px #888888;
+            border-radius: 12px;
+            padding: 10px 20px;
+            background-color: burlywood;
+            margin: 25px;
+         align-items: center;
+    flex-wrap: wrap;
+     justify-content: space-around;
+    background-image: url('../images/4868953.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+
+
+
+}
+
+
+body{
+    background-image: url('../images/2177753.png');
+}
+
+
+
+h1{
+    color: azure;
+
+}
+h2{
+    color: azure;
+}
+
+
+.estrelas{
+    color:gold;
+}
+
+
+main {
+  height: 50vh;
+  background-color:rgb(238, 248, 248);
+  padding: 4em 4em;
+}
+
+.tab {
+ margin-left: 2.5em
+}
+
+.parallax{
+      min-height: 200px;
+    display: flex;
+     flex-wrap: wrap;
+
+      justify-content:center;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.centrarTexto {
+
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
+    left: 0px;
+    margin-bottom: 20px;
+
+
+
+}
+
+
+
+
+
+

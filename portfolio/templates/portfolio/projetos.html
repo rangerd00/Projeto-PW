@@ -1,0 +1,185 @@
+
+{% extends 'portfolio/layout.html' %}
+
+
+
+
+
+{% block main %}
+
+    {%  load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/style.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/projetos.css' %}"/>
+
+
+            <meta charset="UTF-8" name="viewport"  content="width=device-width,initial-scale=1.0
+">
+
+
+
+
+
+
+
+    <h1 div style="text-align:center">Projetos</h1>
+    <br>
+    <h2 style="text-align:center">Projetos Pessoais</h2>
+
+
+<div class="container" >
+
+
+  <div>
+
+
+
+    <h3 style="margin-bottom:0.30cm;" >Reverberation model and Geo Space Processing(Python) </h3>
+
+    <h5 style="margin-bottom:0.30cm;">Modelo de reverberação de uma sala de orquestra </h5>
+
+    <h4 style="margin-bottom:0.30cm;">Participantes:  <a href="https://github.com/mariosilva22007457" target="_blank" > Mário Silva </a> </h4>
+
+    <h4 style="margin-bottom:0.30cm;">Tecnologias usadas: Python </h4>
+
+    <h4 style="margin-bottom:0.30cm;">Github: <a href="https://github.com/mj25200/Reverberation-model-and-Geo-Space-Processing-Python-" target="_blank"> Reverberation Model  </a> </h4>
+         {% load static %}
+
+
+
+  </div>
+
+  <div>
+    <h3 style="margin-bottom:0.30cm;">Telegram Bot(Python) </h3>
+    <h5 style="margin-bottom:0.30cm;">Bot de Telegram </h5>
+    <h4 style="margin-bottom:0.30cm;">Participantes:  <a href="https://github.com/mariosilva22007457" target="_blank" > Mário Silva </a> </h4>
+    <h4 style="margin-bottom:0.30cm;">Tecnologias usadas: Python </h4>
+    <h4 style="margin-bottom:0.30cm;">Github: <a href="https://github.com/mj25200/PythonBots" target="_blank"> Um bot de Telegram </a> </h4>
+
+  </div>
+
+
+
+  <div>
+    <h3 style="margin-bottom:0.30cm;">Car Racing on a track (Python) </h3>
+    <h5 style="margin-bottom:0.30cm;">Carro numa pista(imagem) </h5>
+    <h4 style="margin-bottom:0.30cm;">Participantes:  <a href="https://github.com/mariosilva22007457" target="_blank" > Mário Silva </a> </h4>
+    <h4 style="margin-bottom:0.30cm;">Tecnologias usadas: Python </h4>
+    <h4 style="margin-bottom:0.30cm;">Github: <a href="https://github.com/mj25200/Race-Car-Python" target="_blank"> Carro numa pista</a> </h4>
+  </div>
+
+
+ </div>
+
+
+
+
+
+
+
+    <h2 style="text-align:center">Projetos Licenciatura</h2>
+
+
+
+
+
+
+
+
+
+
+    <div class="container" >
+ {% for projeto in projetos %}
+
+  <div>
+
+
+    <h3 style="margin-bottom:0.30cm;" >  Titulo:  {{projeto.titulo}}      </h3>
+
+
+
+
+    <h5 style="margin-bottom:0.30cm;"> Descricão:    {{projeto.descricao}}           </h5>
+
+        {% for pessoas in projeto.participantes.all %}
+    <h4 style="margin-bottom:0.30cm;">  Participantes:   <a href="{{ pessoas.linkedin }}" target="_blank" > {{ pessoas }}</a> </h4>
+    {% endfor %}
+
+    <h4 style="margin-bottom:0.30cm;">  Tecnologias:      {{ projeto.tecnologias }}              </h4>
+
+
+    <h4 style="margin-bottom:0.30cm;"> Github:   <a href="{{projeto.github}}" target="_blank"> Click here </a> </h4>
+
+
+         <h4 style="margin-bottom:0.30cm;">  Ano: {{ projeto.ano}}   </h4>
+
+       <h4 style="margin-bottom:0.30cm;"> <a href="{{projeto.github}}" target="_blank"> <img src="{{ projeto.imagem.url }}" alt="error"> </a>   </h4>
+
+         {% load static %}
+
+
+
+  </div>
+
+          {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </div>
+
+
+
+
+        <h2 style="text-align:center">Trabalhos Finais de Curso interessantes</h2>
+
+        <div class="container" >
+
+
+  <div>
+
+
+
+  </div>
+
+ </div>
+
+
+
+
+{% endblock main %}
+

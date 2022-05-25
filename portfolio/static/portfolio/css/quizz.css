@@ -1,0 +1,79 @@
+
+
+.container{
+position: relative;
+  display: flex;
+align-content: center;
+        min-height: 1500px;
+
+    background-image: url('../images/1772247.jpg');
+   flex-wrap: wrap;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+
+}
+
+
+form{
+    margin-left: 50px;
+}
+
+.contendor{
+   display: flex;
+   grid-template-columns: repeat(2, auto);
+   grid-template-rows: repeat(1, auto);
+   margin-top: 2px;
+   margin-left: 2px;
+   padding: 10px;
+   gap: 10px;
+
+  justify-content: center;
+  align-items: center;
+
+}
+
+.contendor div{
+    width: 400px;
+    height: 300px;
+    box-shadow: 5px 2px 3px 7px black;
+    border-radius: 10px;
+    background-color: LightGray;
+
+    margin: 7px;
+
+}
+
+.submit{
+    margin-top: 20px;
+    background-image: url("../images/sax.png");
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .5s;
+}
+
+.submit:hover{
+    transform: scale(1.1);
+}
+
+
+.contendor .post2{
+    height: 500px;
+    width: 1000px;
+
+}
+
+.contendor .post{
+    height: 520px;
+    width: 480px;
+    margin-left: 50%;
+}

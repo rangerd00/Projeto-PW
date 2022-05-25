@@ -1,0 +1,100 @@
+.container {
+
+  display: flex;
+    position: relative;
+
+    background-image: url('../images/home-ce-610.jpg');
+   flex-wrap: wrap;
+
+
+
+
+
+        min-height: 300px;
+
+
+      justify-content:center;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+
+}
+
+.container  div {
+      width: 450px;
+    height: 450px;
+    box-shadow: 5px 5px 15px #888888;
+            border-radius: 12px;
+            padding: 10px 20px;
+            background-color: lightcyan;
+            margin: 25px;
+         align-items: center;
+    flex-wrap: wrap;
+     justify-content: space-around;
+
+
+
+
+}
+
+body{
+    background-image: url('../images/minimalist.jpg');
+}
+
+
+
+h1{
+    color: azure;
+
+}
+h2{
+    color: azure;
+}
+
+
+.estrelas{
+    color:gold;
+}
+
+
+main {
+  height: 50vh;
+  background-color:rgb(238, 248, 248);
+  padding: 4em 4em;
+}
+
+.tab {
+ margin-left: 2.5em
+}
+
+.parallax{
+      min-height: 200px;
+    display: flex;
+     flex-wrap: wrap;
+
+      justify-content:center;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+ .centrar{display:block;text-align:center}
+ .centrar2{display:block;text-align:center; padding-top: 30px}
+
+.centerImg {
+display: block;
+margin-left: auto;
+margin-right: auto
+
+}
+

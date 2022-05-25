@@ -1,0 +1,129 @@
+.containerblog{
+
+  display: flex;
+align-content: center;
+
+
+    background-image: url('../images/pexels-pixabay-261579.jpg');
+   flex-wrap: wrap;
+
+
+position: relative;
+
+
+        min-height: 3000px;
+
+
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+
+
+
+
+
+
+      justify-content:center;
+
+  /* Create the parallax scrolling effect */
+
+}
+
+.contendor{
+     position:absolute
+  ;
+    top: 5%;
+    left: 50%;
+
+   margin-top: 2px;
+   margin-left: 20px;
+   padding: 10px;
+   gap: 10px;
+
+               text-align: center;
+
+
+
+
+
+}
+
+
+
+.contendor div{
+    width: 400px;
+    height: 400px;
+
+    background-image: url("../../portfolio/images/03a79ce9b715858f59e7e90d49a6dc8d.png");
+    background-size: cover;
+    padding-top: 50px;
+
+    margin: 30px;
+
+}
+
+.btn {
+   margin-top: 5px;
+    background-color: white;
+    text-decoration: aquamarine;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 10px;
+
+
+
+}
+
+.btn:hover{
+    transform: scale(1.2);
+}
+
+.contendor div p{
+    margin-left: 25px;
+}
+
+.contendor div .editar{
+    margin-left: 75%;
+    color: tan;
+}
+
+
+.contendor div .apagar{
+    margin-left: 75%;
+    color: red;
+}
+
+
+.contendor div p:nth-child(1){
+    margin-left: 15px;
+    font-size: 27px;
+}
+
+.divRetangulos div p:nth-child(2){
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.divRetangulos div p:nth-child(3){
+    margin-left: 3px;
+    font-size: 15px;
+}
+
+.centrartexto4{
+        text-align: center;
+
+
+    position: relative;
+  width: 100%;
+
+
+    margin-bottom: 5px;
+    color: aliceblue;
+}

@@ -1,0 +1,14 @@
+
+
+{% block main %}
+<h3>Novo Post</h3>
+
+    <form action="" method="POST" >
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <a href="{% url 'portfolio:blog' %}" role="button" class="btn btn-warning">Cancel</a>
+        <input type="submit" value="Gravar" class="btn btn-success" >
+    </form>
+
+{% endblock %}

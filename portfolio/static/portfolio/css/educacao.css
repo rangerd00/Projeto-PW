@@ -1,0 +1,117 @@
+
+.container2 {
+position: relative;
+  display: flex;
+align-content: center;
+        min-height: 3200px;
+
+    background-image: url('../images/1772247.jpg');
+   flex-wrap: wrap;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+
+}
+
+
+.centrartexto{
+        text-align: center;
+    vertical-align: center;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    margin-bottom: 20px;
+    color: aliceblue;
+}
+
+.centrartexto2{
+        text-align: center;
+
+
+    position: relative;
+  width: 100%;
+
+
+    margin-bottom: 5px;
+    color: aliceblue;
+}
+
+
+.centrartexto3{
+        text-align: center;
+
+
+    position: relative;
+  width: 40%;
+
+
+    margin-bottom: 5px;
+    color: aliceblue;
+}
+
+.centrartexto4{
+        text-align: right;
+        margin-right: 180px;
+
+
+    position: relative;
+  width: 100%;
+
+
+    margin-bottom: 10px;
+    color: aliceblue;
+
+   align-items:center;
+}
+
+.centrartexto5{
+        text-align: right;
+        margin-right: 180px;
+
+
+    position: relative;
+  width: 100%;
+
+
+    margin-bottom: 10px;
+    color: aliceblue;
+}
+
+
+
+
+
+
+.textotras{
+    position: relative;
+}
+
+.container2 div{
+
+          width: 450px;
+    height: 450px;
+    box-shadow: 5px 5px 15px #888888;
+            border-radius: 12px;
+            padding: 10px 20px;
+            background-color: lightcyan;
+            margin: 25px;
+         align-items: center;
+    flex-wrap: wrap;
+     justify-content: space-around;
+
+
+}
+
+.img{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 736px;
+
+}

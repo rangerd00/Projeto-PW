@@ -1,0 +1,13 @@
+
+{% block main %}
+<h3>Edit your post here !</h3>
+    <form action="{% url 'portfolio:edita' blog_post_id %}" method="POST" >
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <a href="{% url 'portfolio:blog' %}" role="button" class="btn btn-warning">Cancel</a>
+        <input type="submit" value="Gravar" class="btn btn-success" >
+
+    </form>
+
+{% endblock %}

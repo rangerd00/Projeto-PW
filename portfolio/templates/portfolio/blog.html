@@ -1,0 +1,58 @@
+
+{% extends 'portfolio/layout.html' %}
+
+{% block style %}
+
+
+
+{% endblock style %}
+
+{% block main %}
+    {%  load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/blogstyle.css' %}">
+<div class="containerblog">
+
+
+    <div class="contendor">
+
+        <a href="{% url 'portfolio:novo' %}" class="btn">Create Post</a>
+
+        {% for blog_post in blog_posts %}
+
+            <div  >
+
+
+                <p>{{blog_post.titulo}}</p>
+
+                <p>{{blog_post.descricao}}</p>
+<br>
+                {% if blog_post.link %}
+                   <p>Link: <a href="{{blog_post.link}}">{{blog_post.link}}</a></p>
+                {% endif %}
+
+             <p>{{blog_post.data}}</p>
+
+
+
+
+            <a href="{% url 'portfolio:edita' blog_post.id %}" class="editar">Editar</a> <a href="{% url 'portfolio:apaga' blog_post.id %}" class="apagar">Apagar</a>
+
+
+
+
+
+
+
+
+             </div>
+
+
+
+        {% endfor %}
+
+    </div>
+</div>
+
+
+
+{% endblock main %}
