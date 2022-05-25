@@ -11,21 +11,32 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
+# config/settings.py
+from environs import Env
 
+env = Env()
+env.read_env()
+
+DEBUG = env.bool("DEBUG", default=False)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-qi_$vpv+w^4_s1u#599)mog6my*gh!mf1%tt7e=oe%jcge)8mb'
+
+
+# config/settings.py
+
+SECRET_KEY = env.str("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -37,9 +48,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'portfolio',
     'cloudinary_storage',
     'cloudinary',
+    'portfolio',
+    'whitenoise.runserver_nostatic',
+
 
 
 ]
@@ -52,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -79,11 +93,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+
+
+    "default": env.dj_db_url("DATABASE_URL")
 }
+
 
 
 # Password validation
@@ -121,6 +135,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+#STATIC_URL = '/portfolio/static/'
+
+STATICFILES_DIRS = [str(BASE_DIR.joinpath('portfolio/static'))]
+STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))   # novo
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # novo
+
 
 
 # Default primary key field type
