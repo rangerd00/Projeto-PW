@@ -94,6 +94,7 @@ def nova_post_view(request):
     return render(request, 'portfolio/nova.html', context)
 
 
+@login_required
 def edita_post_view(request, blog_post_id):
     post = Post.objects.get(id=blog_post_id)
     form = PostForm(request.POST or None, request.FILES, instance=post)
@@ -106,6 +107,7 @@ def edita_post_view(request, blog_post_id):
     return render(request, 'portfolio/edita.html', context)
 
 
+@login_required
 def apaga_post_view(request, blog_post_id):
     Post.objects.get(id=blog_post_id).delete()
     return HttpResponseRedirect(reverse('portfolio:blog'))
