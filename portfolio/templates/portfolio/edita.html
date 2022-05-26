@@ -1,12 +1,26 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block style %}
+
+
+
+{% endblock style %}
+
+
+
+
 
 {% block main %}
-<h3>Edit your post here !</h3>
-    <form action="{% url 'portfolio:edita' blog_post_id %}" method="POST" >
+    {%  load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/edita.css' %}">
+
+<h2 class="centrarH2">Edit your post here !</h2>
+    <form class="submission_form" action="{% url 'portfolio:edita' blog_post_id %}" method="POST"  enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
 
         <a href="{% url 'portfolio:blog' %}" role="button" class="btn btn-warning">Cancel</a>
-        <input type="submit" value="Gravar" class="btn btn-success" >
+        <input type="submit" value="Gravar" id="sendBtn" >
 
     </form>
 

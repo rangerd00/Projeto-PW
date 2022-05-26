@@ -1,3 +1,5 @@
+from django.contrib.auth import logout, authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
@@ -7,7 +9,7 @@ import datetime
 from django.urls import reverse
 
 from portfolio.forms import PostForm
-from portfolio.models import Post,  Noticias, Tecnologias, Tecnicas, Padroes
+from portfolio.models import Post, Noticias, Tecnologias, Tecnicas, Padroes
 from .models import Quizz
 from .forms import QuizzForm
 from .funcQuizz import draw_graph
@@ -52,13 +54,28 @@ def blog_view(request):
     return render(request, 'portfolio/blog.html', context)
 
 
-
 def web_view(reuqest):
-    context = {'noticias': Noticias.objects.all(),'tecnologias': Tecnologias.objects.all(),'tecnicas': Tecnicas.objects.all(),'padroes': Padroes.objects.all()}
+    context = {'noticias': Noticias.objects.all(), 'tecnologias': Tecnologias.objects.all(),
+               'tecnicas': Tecnicas.objects.all(), 'padroes': Padroes.objects.all()}
     return render(reuqest, 'portfolio/web.html', context)
 
 
 def login_view(request):
+    if request.method == "POST":
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            context = {'blog_posts': Post.objects.all()}
+            return render(request, 'portfolio/login.html', context)
+        else:
+            return render(
+                request, 'portfolio/login.html',
+                {'message': "Invalid Credentials"}
+            )
+
     return render(request, 'portfolio/login.html')
 
 
@@ -108,3 +125,11 @@ def quizz_view(request):
     }
 
     return render(request, 'portfolio/quizz.html', context)
+
+
+def logout_view(request):
+    logout(request)
+    return render(
+        request, 'portfolio/login.html',
+        {'message': "Logged Out"}
+    )

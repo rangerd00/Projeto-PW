@@ -1,17 +1,31 @@
 
 {% extends 'portfolio/layout.html' %}
 
-{block style %}
-    {%  load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/style.css' %}"/>
-<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/home.css' %}"/>
+{% block style %}
 
-{ endblock style %}
+
+{% endblock style %}
+
+
 
 {% block main %}
+    {%  load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/login.css' %}"/>
+
         <meta charset="UTF-8" name="viewport"  content="width=device-width,initial-scale=1.0
 ">
-
+<h2 class="centrarH2">Login</h2>
+<form class="submission_form" action="{% url 'portfolio:login'   %}" method="POST"  enctype="multipart/form-data">
+    {% csrf_token %}
+    <label>
+        <input type="text" name="username" placeholder="Username">
+    </label>
+    <label>
+        <input type="text" name="password" placeholder="Password">
+    </label>
+    <input type="submit">
+</form>
 
 
 

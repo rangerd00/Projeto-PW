@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
-
+from django.contrib import admin
+from django.urls import path, include # new
 
 app_name = 'portfolio'
 name = "home"
@@ -19,6 +20,9 @@ urlpatterns = [
     path('edita/<int:blog_post_id>', views.edita_post_view, name='edita'),
     path('apaga/<int:blog_post_id>', views.apaga_post_view, name='apaga'),
     path('quizz', views.quizz_view, name='quizz'),
+    path('login', views.login_view, name='login'),
+    path('logout', views.logout_view, name='logout'),
+
 
 
 ]

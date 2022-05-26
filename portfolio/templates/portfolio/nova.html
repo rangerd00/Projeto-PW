@@ -1,14 +1,25 @@
+{% extends 'portfolio/layout.html' %}
 
+{% block style %}
+
+
+
+{% endblock style %}
 
 {% block main %}
-<h3>Novo Post</h3>
 
-    <form action="" method="POST" >
+    {%  load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/novo_post.css' %}">
+
+<body>
+<h2 class="centrarH2">New Post!</h2>
+
+    <form class="submission_form" action="" method="POST"  enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
 
         <a href="{% url 'portfolio:blog' %}" role="button" class="btn btn-warning">Cancel</a>
-        <input type="submit" value="Gravar" class="btn btn-success" >
+        <input type="submit" value="Gravar"       id ="sendBtn">
     </form>
-
+  </body>
 {% endblock %}
