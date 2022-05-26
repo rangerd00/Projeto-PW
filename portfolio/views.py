@@ -69,7 +69,7 @@ def login_view(request):
         if user is not None:
             login(request, user)
             context = {'blog_posts': Post.objects.all()}
-            return render(request, 'portfolio/login.html', context)
+            return render(request, 'portfolio/home.html', context)
         else:
             return render(
                 request, 'portfolio/login.html',
