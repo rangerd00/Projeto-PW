@@ -82,7 +82,7 @@ def login_view(request):
 def formacao_view(request):
     return render(request, 'portfolio/formação.html')
 
-
+@login_required
 def nova_post_view(request):
     form = PostForm(request.POST or None, request.FILES)
     if form.is_valid():
