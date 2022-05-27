@@ -2,8 +2,9 @@
 position: relative;
   display: flex;
 align-content: center;
-        min-height: 100%;
-height: auto;
+        min-height: 6500px;
+    height: auto;
+
     background-image: url('../images/hologram_scheme_scifi_139294_3840x2160.jpg');
    flex-wrap: wrap;
 
