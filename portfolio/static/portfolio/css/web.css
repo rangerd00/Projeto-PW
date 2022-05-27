@@ -47,15 +47,15 @@ align-content: center;
 
 .centrartexto2{
         text-align: center;
-    vertical-align: center;
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    margin-bottom: 20px;
+
+margin-bottom: 10px;
+    margin-top: 10px;
+    position: relative;
+  width: 100%;
+
+
+
     color: aliceblue;
-
-
- 
 }
 
 
