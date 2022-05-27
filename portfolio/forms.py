@@ -55,6 +55,17 @@ class QuizzForm(ModelForm):
 
 
 help_texts = {
+    'nome': 'Qual o seu nome?',
+
+    'pergunta1': "Em maiusculas",
+
+    'pergunta2': "Em maiusculas",  #
+
+    'pergunta3': "Em maiusculas",  #
+
+    'pergunta4': "Em maiusculas",  #
+
+    'pergunta5': "Em maiusculas"
 
 }
 

@@ -1,6 +1,6 @@
 from ctypes.wintypes import RGB
 
-from .models import Quizz
+
 import matplotlib.pyplot as plt
 
 
