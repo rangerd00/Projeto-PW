@@ -2,8 +2,8 @@
 position: relative;
   display: flex;
 align-content: center;
-        min-height: 6500px;
-
+        min-height: 100%;
+height: auto;
     background-image: url('../images/hologram_scheme_scifi_139294_3840x2160.jpg');
    flex-wrap: wrap;
 
@@ -13,7 +13,6 @@ align-content: center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 
 
 
@@ -145,6 +144,11 @@ gap: 10px;
     padding: 2px;
 
 
+}
+
+.imagem:hover{
+
+    	transform: scale(1.5);
 }
 
 p{
