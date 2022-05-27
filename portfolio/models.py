@@ -81,7 +81,7 @@ class UnidadesCurriculares(models.Model):
 
 class Tecnologias(models.Model):
     nome = models.CharField(max_length=200)
-    acronimo = models.CharField(max_length=200)
+    acronimo = models.CharField(max_length=200,blank=True)
     ano = models.IntegerField(default=0)
     criador = models.CharField(max_length=200, blank=True)
     logotipo = models.ImageField(upload_to='media/', null=True)
