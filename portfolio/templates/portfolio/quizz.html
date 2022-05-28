@@ -16,12 +16,12 @@
 
     <div class="contendor">
 
-        <div class="post">
+        <div class="part1">
 
             <form action="" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <input type="submit" value="Submeta o quizz!" class="submit">
+                <input type="submit" value="Submit your Quizz!!" class="submit">
             </form>
         </div>
 
@@ -29,7 +29,7 @@
 
     <div class="contendor">
 
-        <div class="post2">
+        <div class="part2">
             {% load static %}
             <img class="img" src="../../static/portfolio/images/grafico_final.png" alt="">
         </div>
