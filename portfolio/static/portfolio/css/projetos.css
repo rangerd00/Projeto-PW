@@ -77,6 +77,47 @@ align-content: center;
 
 }
 
+.containerTFC {
+
+  display: flex;
+
+    background-image: url('../images/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg');
+   flex-wrap: wrap;
+
+
+
+
+        min-height: 300px;
+
+
+      justify-content:center;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+
+}
+
+.containerTFC  div {
+      width: 650px;
+    height: 650px;
+    box-shadow: 5px 5px 15px #888888;
+            border-radius: 12px;
+            padding: 10px 20px;
+            background-color: lightcyan;
+            margin: 25px;
+         align-items: center;
+    flex-wrap: wrap;
+     justify-content: space-around;
+
+
+
+
+}
 
 
 

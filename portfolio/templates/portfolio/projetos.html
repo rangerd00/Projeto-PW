@@ -138,11 +138,64 @@
 
 
 
-  <h2 style="text-align:center">Trabalhos Finais Curso Interessantes</h2>
 
 
 
 
+    <h2 style="text-align:center">Trabalhos Finais Interessantes</h2>
+
+
+
+
+
+
+
+
+
+
+    <div class="containerTFC" >
+ {% for trabalho in trabalhos %}
+
+  <div>
+
+
+{% for pessoas in trabalho.autores.all %}
+    <h3 style="margin-bottom:0.30cm;" >  Autores:  {{trabalho.autores}}      </h3>
+         {% endfor %}
+{% for pessoas in trabalho.orientadores.all %}
+    <h5 style="margin-bottom:0.30cm;"> Orientadores:    {{trabalho.orientadores}}           </h5>
+ {% endfor %}
+
+    <h4 style="margin-bottom:0.30cm;">  Ano: {{trabalho.ano}}    </h4>
+
+
+    <h4 style="margin-bottom:0.30cm;">  Titulo:      {{ trabalho.titulo }}              </h4>
+
+
+    <h4 style="margin-bottom:0.30cm;"> Resumo:   {{trabalho.resumo}}</h4>
+
+
+
+
+       <h4 style="margin-bottom:0.30cm;"> <img src="{{ trabalho.imagem.url }}" alt="error">   </h4>
+
+         {% load static %}
+
+
+  <h4 style="margin-bottom:0.30cm;">  Relatorio: {{ trabalho.relatorio}}   </h4>
+
+<h4 style="margin-bottom:0.30cm;"> Github:   <a href="{{trabalho.github}}" target="_blank"> Click here </a> </h4>
+
+        <h4 style="margin-bottom:0.30cm;"> Video:   <a href="{{trabalho.video}}" target="_blank"> Click here </a> </h4>
+
+
+    </div>
+
+  </div>
+
+          {% endfor %}
+
+</div>
 
 
 

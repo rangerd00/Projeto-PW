@@ -9,7 +9,7 @@ import datetime
 from django.urls import reverse
 
 from portfolio.forms import PostForm
-from portfolio.models import Post, Noticias, Tecnologias, Tecnicas, Padroes, TrabalhosFinaisCurso
+from portfolio.models import Post, Noticias, Tecnologias, Tecnicas, Padroes
 from .models import Quizz
 from .forms import QuizzForm
 from .funcQuizz import draw_graph
@@ -17,7 +17,7 @@ from .forms import Projetos
 from .models import Projetos
 from .models import UnidadesCurriculares
 from .forms import UnidadesCurricularesForm
-
+from .models import TrabalhosFinaisCurso
 
 def index_view(request):
     return render(request, 'portfolio/layout.html')
