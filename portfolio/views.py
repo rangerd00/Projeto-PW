@@ -8,7 +8,7 @@ import datetime
 # Create your views here.
 from django.urls import reverse
 
-from portfolio.forms import PostForm
+from portfolio.forms import PostForm, TFCForm
 from portfolio.models import Post, Noticias, Tecnologias, Tecnicas, Padroes
 from .models import Quizz
 from .forms import QuizzForm
@@ -18,6 +18,7 @@ from .models import Projetos
 from .models import UnidadesCurriculares
 from .forms import UnidadesCurricularesForm
 from .models import TrabalhosFinaisCurso
+
 
 def index_view(request):
     return render(request, 'portfolio/layout.html')
@@ -94,6 +95,20 @@ def nova_post_view(request):
     return render(request, 'portfolio/nova.html', context)
 
 
+def nova_tfc_view(request):
+    context = {}
+    if request.method == 'POST':
+        form = TFCForm(request.POST or None, request.FILES)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('portfolio:projetos'))
+
+        form = TFCForm(request.POST or None, request.FILES)
+        context = {'form': form}
+
+    return render(request, 'portfolio/novoTFC.html', context)
+
+
 @login_required
 def edita_post_view(request, blog_post_id):
     post = Post.objects.get(id=blog_post_id)
@@ -135,5 +150,3 @@ def logout_view(request):
         request, 'portfolio/login.html',
         {'message': "Logged Out"}
     )
-
-

@@ -1,0 +1,25 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block style %}
+
+
+
+{% endblock style %}
+
+{% block main %}
+
+    {%  load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/novo_post.css' %}">
+
+<body>
+<h2 class="centrarH2">New TFC!</h2>
+
+    <form class="submission_form"  method="POST"  enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+
+        <input type="submit" value="Gravar/Criar"       class="botaoSubmit">
+    </form>
+  </body>
+{% endblock %}

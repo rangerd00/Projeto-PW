@@ -32,6 +32,23 @@ class PostForm(ModelForm):
         }
 
 
+class TFCForm(ModelForm):
+    class Meta:
+        model = TrabalhosFinaisCurso
+        fields = '__all__'
+        widgets = {
+            'autores': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'autor...'}),
+            'orientadores': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'orientadores...'}),
+            'ano': forms.DateInput(attrs={'class': 'form-control', 'placeholder': 'ano...'}),
+            'titulo': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'titulo...'}),
+            'resumo': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'resumo...'}),
+            'relatorio': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'relatorio...'}),
+            'github': forms.URLInput(attrs={'class': 'form-control', 'placeholder': 'github...'}),
+            'video': forms.URLInput(attrs={'class': 'form-control', 'placeholder': 'video...'}),
+
+        }
+
+
 class QuizzForm(ModelForm):
     class Meta:
         model = Quizz

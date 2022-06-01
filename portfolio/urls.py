@@ -23,6 +23,8 @@ urlpatterns = [
     path('login', views.login_view, name='login'),
     path('logout', views.logout_view, name='logout'),
     path('trabalhos', views.projetos_view, name='trabalhos'),
+    path('novotfc', views.nova_tfc_view, name='novotfc'),
+
 
 
 

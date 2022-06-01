@@ -118,3 +118,6 @@ class TrabalhosFinaisCurso(models.Model):
     relatorio = models.CharField(max_length=1000)
     github = models.URLField(max_length=200, blank=True)
     video = models.URLField(max_length=200, blank=True)
+
+    def str(self):
+        return {self.titulo}
