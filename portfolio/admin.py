@@ -4,7 +4,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Post, Noticias
+from .models import Post, Noticias, TrabalhosFinaisCurso
 
 from .models import Quizz
 from .models import Pessoa
@@ -24,3 +24,4 @@ admin.site.register(Noticias)
 admin.site.register(Tecnologias)
 admin.site.register(Padroes)
 admin.site.register(Tecnicas)
+admin.site.register(TrabalhosFinaisCurso)
