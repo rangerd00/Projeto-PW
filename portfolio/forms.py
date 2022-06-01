@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Post, Quizz, UnidadesCurriculares, Noticias, Tecnologias, Padroes, Tecnicas
+from .models import Post, Quizz, UnidadesCurriculares, Noticias, Tecnologias, Padroes, Tecnicas, TrabalhosFinaisCurso
 from .models import Pessoa, Projetos
 
 
@@ -200,7 +200,7 @@ class PadroesForm(ModelForm):
         labels = {
             'nome': 'Insira titulo',
 
-            'link':'Insira o link',
+            'link': 'Insira o link',
 
             'descricao': 'Insira as caracteristicas',
 
@@ -211,7 +211,6 @@ class PadroesForm(ModelForm):
 help_texts = {
 
 }
-
 
 
 class TecnicasForm(ModelForm):
@@ -232,3 +231,19 @@ help_texts = {
 
 }
 
+
+class TrabalhosFinaisCursoForm(ModelForm):
+    class Meta:
+        model = TrabalhosFinaisCurso
+        fields = '__all__'
+        labels = {
+            'autores': 'Insira autores',
+            'orientadores': 'Insira orientadores',
+            'ano': 'Insira ano',
+            'titulo': 'Insira Titulo',
+            'resumo': 'Insira resumo',
+            'imagem': 'Insira imagem',
+            'relatorio': 'Insira imagem',
+            'github': 'Insira github',
+            'video': 'Insira link video'
+        }

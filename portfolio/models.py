@@ -81,7 +81,7 @@ class UnidadesCurriculares(models.Model):
 
 class Tecnologias(models.Model):
     nome = models.CharField(max_length=200)
-    acronimo = models.CharField(max_length=200,blank=True)
+    acronimo = models.CharField(max_length=200, blank=True)
     ano = models.IntegerField(default=0)
     criador = models.CharField(max_length=200, blank=True)
     logotipo = models.ImageField(upload_to='media/', null=True)
@@ -106,3 +106,15 @@ class Tecnicas(models.Model):
     nome = models.CharField(max_length=200)
     link = models.URLField(max_length=200, blank=True)
     imagem = models.ImageField(upload_to='media/', null=True)
+
+
+class TrabalhosFinaisCurso(models.Model):
+    autores = models.CharField(max_length=200)
+    orientadores = models.CharField(max_length=200)
+    ano = models.IntegerField(default=0)
+    titulo = models.CharField(max_length=200)
+    resumo = models.CharField(max_length=500)
+    imagem = models.ImageField(upload_to='media/', null=True)
+    relatorio = models.CharField(max_length=1000)
+    github = models.URLField(max_length=200, blank=True)
+    video = models.URLField(max_length=200, blank=True)

@@ -9,7 +9,7 @@ import datetime
 from django.urls import reverse
 
 from portfolio.forms import PostForm
-from portfolio.models import Post, Noticias, Tecnologias, Tecnicas, Padroes
+from portfolio.models import Post, Noticias, Tecnologias, Tecnicas, Padroes, TrabalhosFinaisCurso
 from .models import Quizz
 from .forms import QuizzForm
 from .funcQuizz import draw_graph
@@ -40,7 +40,7 @@ def educacao_view(request):
 
 
 def projetos_view(request):
-    context = {'projetos': Projetos.objects.all()}
+    context = {'projetos': Projetos.objects.all(), 'trabalhos': TrabalhosFinaisCurso.objects.all()}
     return render(request, 'portfolio/projetos.html', context)
 
 
@@ -135,3 +135,5 @@ def logout_view(request):
         request, 'portfolio/login.html',
         {'message': "Logged Out"}
     )
+
+
