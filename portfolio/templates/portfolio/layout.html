@@ -60,6 +60,13 @@ html, body {
     <title>Pagina Inicial</title>
 </head>
 <body>
+
+<script>
+var today = new Date();
+
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
+document.getElementById("time").innerHTML = time;
+</script>
 <header >
     <div>   <h2>Mário Malta Silva</h2>  </div>
 
@@ -132,7 +139,10 @@ html, body {
 
 
     </div>
+
+
          <div style="padding-right: 30px">  <a href="{%  url 'portfolio:home'%}" > Home </a>   </div>
+     <div style="padding-right: 20px">  <p id="time"> </p> </div>
     <div style="margin: 10px" ><a href="https://www.linkedin.com/in/m%C3%A1rio-j-malta-silva-6b6225207/" target="_blank"> Mário Malta Silva </a></div>
 
 
