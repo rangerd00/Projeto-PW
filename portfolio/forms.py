@@ -42,7 +42,7 @@ class TFCForm(ModelForm):
             'ano': forms.DateInput(attrs={'class': 'form-control', 'placeholder': 'ano...'}),
             'titulo': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'titulo...'}),
             'resumo': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'resumo...'}),
-            'relatorio': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'relatorio...'}),
+            'relatorio': forms.URLInput(attrs={'class': 'form-control', 'placeholder': 'github...'}),
             'github': forms.URLInput(attrs={'class': 'form-control', 'placeholder': 'github...'}),
             'video': forms.URLInput(attrs={'class': 'form-control', 'placeholder': 'video...'}),
 

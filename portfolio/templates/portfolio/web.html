@@ -172,7 +172,22 @@
   <img  class="imagem" src="../../static/portfolio/images/diagramaER.png" alt="Diagrama ER" width="450" height="450">
 </a>
 
+<script>
 
+    const url = 'https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/1110600.json ';
+        async function getWeather(){
+
+        const response = await fetch(
+            url);
+        const data = await response.json();
+        console.log(data.tMax);
+
+    }
+
+    getWeather();
+
+
+</script>
 
 
 

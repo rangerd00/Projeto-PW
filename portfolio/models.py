@@ -115,7 +115,7 @@ class TrabalhosFinaisCurso(models.Model):
     titulo = models.CharField(max_length=200)
     resumo = models.CharField(max_length=500)
     imagem = models.ImageField(upload_to='media/', null=True)
-    relatorio = models.CharField(max_length=1000)
+    relatorio = models.URLField(max_length=200, blank=True)
     github = models.URLField(max_length=200, blank=True)
     video = models.URLField(max_length=200, blank=True)
 
