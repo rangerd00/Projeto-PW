@@ -79,25 +79,20 @@ align-content: center;
 
 .containerTFC {
 
+position: relative;
   display: flex;
+align-content: center;
+        min-height: 300px;
 
-    background-image: url('../images/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg');
+    background-image: url('../images/fabio-oyXis2kALVg-unsplash.jpg');
    flex-wrap: wrap;
 
-
-
-
-        min-height: 3000px;
-
-
-      justify-content:center;
 
   /* Create the parallax scrolling effect */
   background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 
 
 }

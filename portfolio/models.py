@@ -120,4 +120,4 @@ class TrabalhosFinaisCurso(models.Model):
     video = models.URLField(max_length=200, blank=True)
 
     def str(self):
-        return {self.titulo}
+        return f"{self.titulo}"
