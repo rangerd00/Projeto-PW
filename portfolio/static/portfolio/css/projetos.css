@@ -98,8 +98,8 @@ align-content: center;
 }
 
 .containerTFC  div {
-      width: 650px;
-    height: 650px;
+    width: 500px;
+    height: 500px;
     box-shadow: 5px 5px 15px #888888;
             border-radius: 12px;
             padding: 10px 20px;
