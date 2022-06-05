@@ -1,3 +1,19 @@
 .body{
     overflow-y: hidden;
+
+position: relative;
+  display: flex;
+align-content: center;
+        min-height: 300px;
+
+    background-image: url('../images/geo.jpg');
+   flex-wrap: wrap;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+;
 }

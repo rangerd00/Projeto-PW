@@ -33,19 +33,17 @@
 
 
 .linkz2 {
-    padding: 4px;
+    padding: 2px;
     text-decoration: none;
     background-color: #2E5266;
     margin: 2px;
     color: whitesmoke;
     box-shadow: 2px 3px 3px #D3D0CB;
-    border-radius: 7px;
+    border-radius: 2px;
 
 
 }
-.linkz2:hover{
-    transform: scale(0.80);
-}
+
 
 
 .centrartexto {

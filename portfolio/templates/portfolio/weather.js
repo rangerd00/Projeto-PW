@@ -15,8 +15,8 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=3
   var descValue = data['weather'][0]['description'];
 
   main.innerHTML = nameValue;
-  desc.innerHTML = "Desc - "+descValue /10;
-  temp.innerHTML = "Temp - "+tempValue /10;
+  desc.innerHTML = "Desc - "+descValue ;
+  temp.innerHTML = "Temp - "+tempValue ;
   input.value ="";
 
 })
