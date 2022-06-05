@@ -61,12 +61,7 @@ html, body {
 </head>
 <body>
 
-<script>
-var today = new Date();
 
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
-document.getElementById("time").innerHTML = time;
-</script>
 <header >
     <div>   <h2>Mário Malta Silva</h2>  </div>
 
@@ -131,6 +126,8 @@ document.getElementById("time").innerHTML = time;
 
     <div   class="center" >  @ ULHT 2022  </div>
 
+    <div style="padding-right: 60px">  <p id="tempo"> </p> </div>
+
             <div style="padding-right: 40px">
 
         <a  href="https://www.ulusofona.pt/" target="_blank"><img src="{% static 'portfolio/images/logo_ulht.png' %}" alt="">
@@ -142,7 +139,32 @@ document.getElementById("time").innerHTML = time;
 
 
          <div style="padding-right: 30px">  <a href="{%  url 'portfolio:home'%}" > Home </a>   </div>
-     <div style="padding-right: 20px">  <p id="time"> </p> </div>
+
+
+    <script>
+
+
+
+
+
+
+
+function realtimeClock(){
+
+    var rtClock = new Date();
+    var time = rtClock.getHours() + ":" + rtClock.getMinutes() + ":" + rtClock.getSeconds()
+
+
+    document.getElementById("tempo").innerHTML = time;
+     var t = setTimeout(realtimeClock, 1000);
+}
+
+
+
+
+
+
+</script>
     <div style="margin: 10px" ><a href="https://www.linkedin.com/in/m%C3%A1rio-j-malta-silva-6b6225207/" target="_blank"> Mário Malta Silva </a></div>
 
 
