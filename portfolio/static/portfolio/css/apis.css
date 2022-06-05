@@ -1,4 +1,4 @@
-.body{
+.contentorAPI{
     overflow-y: hidden;
 
 position: relative;
@@ -9,11 +9,11 @@ align-content: center;
     background-image: url('../images/hologram_scheme_scifi_139294_3840x2160.jpg');
    flex-wrap: wrap;
 
-
+text-align: center;
   /* Create the parallax scrolling effect */
   background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-;
+
 }

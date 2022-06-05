@@ -10,27 +10,45 @@
 
     {%  load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/weather.css' %}"/>
+<script>
 
+    var weatherData = document.getElementById("weather_data");
+  weatherData.addEventListener('click',function(e){
+ e.preventDefault();
+ var cityName = document.getElementById("cityName").value;
+ var url = "https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid=38440d6588cb8e97791a0a6db25b1f5c";
+  if(cityName == ""){
+      alert("Enter a city name");
+  }else{
+  fetch(url).then(function(response){
+      if(response.ok){
+          return response.json();
+      }else{
+          throw new Error(Error);
+      }
+  }).then(function(data){
+    const html =    `
+        <h2 class="text-danger text-center"><span class="text-dark">City:</span>${data.name}</h2>
+        ` ;
+      document.getElementById("display_data").innerHTML = html;
+  }).catch(function(error){
+      console.log(error);
+  });
+  }
+});
+</script>
 <body>
 
-    <div class="input">
-        <label>
-            <input type="text" placeholder="Enter the city" class="input_text">
-        </label>
-        <label>  <input type="submit" value="Submit" class="submit">   </label>
-
-    </div>
 
 
-  <div class="container">
- <form>
-     <label for="cityName"></label><input type="text" id="cityName" placeholder="Enter a city name"><br>
+
+<form>
+    <label for="cityName"></label><input type="text" id="cityName" placeholder="Enter a city name"><br>
  <input type="submit" value="Get Weather Information" id="weather_data">
 </form>
 
 <div id="display_data"></div>
-  </div>
-<script src="weather.js"></script>
+
 
   </body>
 {% endblock %}
