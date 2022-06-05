@@ -11,44 +11,6 @@
     {%  load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/weather.css' %}"/>
 <script>
-    const input = document.querySelector("#input");
-const city = document.querySelector("#city");
-
-const cityName = document.querySelector("#cityName");
-const Temp = document.querySelector("#temp");
-const main = document.querySelector("#main");
-const discription = document.querySelector("#discription");
-const image = document.querySelector("#image");
-
-input.onsubmit = (e) => {
-  e.preventDefault();
-  weatherUpdate(city.value);
-  city.value = "";
-};
-
-weatherUpdate = (city) => {
-  const xhr = new XMLHttpRequest();
-  xhr.open(
-    "GET",
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=cad7ec124945dcfff04e457e76760d90`);
-
-
-  xhr.send();
-  xhr.onload = () => {
-    if (xhr.status === 404) {
-      alert("Place not found");
-    } else {
-      var data = JSON.parse(xhr.response);
-      cityName.innerHTML = data.name;
-      Temp.innerHTML = `${Math.round(data.main.temp - 273.15)}°C`;
-      main.innerHTML = data.weather[0].main;
-      discription.innerHTML = data.weather[0].description;
-      image.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-    }
-  };
-};
-
-weatherUpdate("Lisbon");
 
 
 </script>
@@ -56,19 +18,6 @@ weatherUpdate("Lisbon");
 
 
 
-<div class="container">
-  <form id="input">
-    <input type="text" id="city" placeholder="Enter City Name">
-    <input type="submit" value="Get Updates">
-  </form>
-  <div id="weatherContainer">
-    <marquee id="cityName">Lisbon</marquee>
-    <span id="temp">23°C</span>
-    <span id="main">Cloudy</span>
-    <marquee id="discription">few clouds</marquee>
-    <img id="image" src="https://openweathermap.org/img/wn/02n@2x.png">
-  </div>
-</div>
 
 
   </body>
