@@ -4,16 +4,20 @@
 position: relative;
   display: flex;
 align-content: center;
-        min-height: 300px;
 
-    background-image: url('../images/hologram_scheme_scifi_139294_3840x2160.jpg');
+
+color: white;
    flex-wrap: wrap;
 
 text-align: center;
-  /* Create the parallax scrolling effect */
-  background-attachment: scroll;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 
+
+}
+
+
+body {
+    background-image: url('../images/hologram_scheme_scifi_139294_3840x2160.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
