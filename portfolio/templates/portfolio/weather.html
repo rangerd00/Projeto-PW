@@ -9,10 +9,28 @@
 {% block main %}
 
     {%  load static %}
-
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/weather.css' %}"/>
 
 <body>
 
+    <div class="input">
+        <label>
+            <input type="text" placeholder="Enter the city" class="input_text">
+        </label>
+        <label>  <input type="submit" value="Submit" class="submit">   </label>
+
+    </div>
+
+
+  <div class="container">
+    <div class="card">
+      <h1 class="name" id="name"></h1>
+      <p class="temp"></p>
+      <p class="clouds"></p>
+      <p class="desc"></p>
+    </div>
+  </div>
+<script src="weather.js"></script>
 
   </body>
 {% endblock %}

@@ -36,6 +36,10 @@ def home_view(request):
     return render(request, 'portfolio/home.html', context)
 
 
+def weather_view(request):
+    return render(request, 'portfolio/weather.html')
+
+
 def apis_view(request):
     return render(request, 'portfolio/apis.html')
 

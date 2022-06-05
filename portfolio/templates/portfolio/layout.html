@@ -2,29 +2,21 @@
 <html lang="en">
 
 <head>
-        <script>
+    <script>
 
 
+        function realtimeClock() {
+
+            var rtClock = new Date();
+            document.getElementById("tempo").innerHTML = rtClock.getHours() + ":" + rtClock.getMinutes() + ":" + rtClock.getSeconds();
+            var t = setTimeout(realtimeClock, 1000);
+        }
 
 
-
-
-
-function realtimeClock(){
-
-    var rtClock = new Date();
-    document.getElementById("tempo").innerHTML = rtClock.getHours() + ":" + rtClock.getMinutes() + ":" + rtClock.getSeconds();
-     var t = setTimeout(realtimeClock, 1000);
-}
-
-
-
-
-
-
-</script>
-    <meta charset="UTF-8" name="viewport"  content="width=device-width,initial-scale=1.0
+    </script>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0
 ">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/style.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/home.css' %}"/>
@@ -32,19 +24,19 @@ function realtimeClock(){
 
     <style type="text/css">
 
-        .menu  div{
+        .menu div {
             display: flex;
 
 
         }
 
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
 
-}
+        }
 
-        .menu a:last-child{
+        .menu a:last-child {
             margin-left: auto;
 
 
@@ -54,27 +46,26 @@ html, body {
         .linkz {
             padding: 20px;
             text-decoration: none;
-         background-color: #050c21;
+            background-color: #050c21;
             margin: 2px;
             color: snow;
-            box-shadow: 2px 3px 3px  ;
+            box-shadow: 2px 3px 3px;
             border-radius: 7px;
 
         }
 
-        .nav-menu{
+        .nav-menu {
 
-            display:flex;
+            display: flex;
             height: 10%;
 
 
         }
 
-        nav a:hover{
+        nav a:hover {
             background-color: lightgray;
             font-weight: bold;
         }
-
 
 
     </style>
@@ -83,11 +74,10 @@ html, body {
 <body onload="realtimeClock()">
 
 
-<header >
-    <div>   <h2>Mário Malta Silva</h2>  </div>
+<header>
+    <div><h2>Mário Malta Silva</h2></div>
 
     <div class="menu">
-
 
 
         <nav class="nav-menu">
@@ -101,16 +91,16 @@ html, body {
             <a class="linkz" href="{% url 'portfolio:blog' %}">Blog</a>
             <a class="linkz" href="{% url 'portfolio:web' %}">Web</a>
             <a class="linkz" style="margin-left: auto" href="{% url 'portfolio:home' %}#aboutMe">About Me</a>
-             <a class="linkz" style="margin-left: auto" href="{% url 'portfolio:home' %}#Contactos">Contact</a>
+            <a class="linkz" style="margin-left: auto" href="{% url 'portfolio:home' %}#Contactos">Contact</a>
 
 
             {% if not user.is_authenticated %}
             <a class="linkz" style="margin-left: auto" href="{% url 'portfolio:login' %}">Login</a>
             {% endif %}
 
-             {% if user.is_authenticated%}
-              <a class="linkz" style="margin-right: auto" href="{% url 'portfolio:logout' %}">Logout</a>
-              {% endif %}
+            {% if user.is_authenticated%}
+            <a class="linkz" style="margin-right: auto" href="{% url 'portfolio:logout' %}">Logout</a>
+            {% endif %}
         </nav>
 
     </div>
@@ -122,19 +112,19 @@ html, body {
 <div id="contacto1">
 
 
-
 </div>
-<footer  >
+<footer>
 
 
-
-    <div>  <a  href="https://github.com/mariosilva22007457" target="_blank"><img src="{% static 'portfolio/images/github.png' %}" alt="">
+    <div><a href="https://github.com/mariosilva22007457" target="_blank"><img
+            src="{% static 'portfolio/images/github.png' %}" alt="">
     </a>
     </div>
 
     <div style="padding-left: 40px">
 
-        <a  href="https://www.linkedin.com/in/m%C3%A1rio-j-malta-silva-6b6225207/" target="_blank"><img src="{% static 'portfolio/images/linkedin.png' %}" alt="">
+        <a href="https://www.linkedin.com/in/m%C3%A1rio-j-malta-silva-6b6225207/" target="_blank"><img
+                src="{% static 'portfolio/images/linkedin.png' %}" alt="">
 
         </a>
 
@@ -142,17 +132,14 @@ html, body {
     </div>
 
 
+    <div class="center"> @ ULHT 2022</div>
 
+    <div style="padding-right: 50px"><p id="tempo"></p></div>
 
+    <div style="padding-right: 40px">
 
-
-    <div   class="center" >  @ ULHT 2022  </div>
-
-    <div style="padding-right: 50px">  <p id="tempo"> </p> </div>
-
-            <div style="padding-right: 40px">
-
-        <a  href="https://www.ulusofona.pt/" target="_blank"><img src="{% static 'portfolio/images/logo_ulht.png' %}" alt="">
+        <a href="https://www.ulusofona.pt/" target="_blank"><img src="{% static 'portfolio/images/logo_ulht.png' %}"
+                                                                 alt="">
 
         </a>
 
@@ -160,11 +147,11 @@ html, body {
     </div>
 
 
-         <div style="padding-right: 30px">  <a href="{%  url 'portfolio:home'%}" > Home </a>   </div>
+    <div style="padding-right: 30px"><a href="{%  url 'portfolio:home'%}"> Home </a></div>
 
 
-
-    <div style="margin: 10px" ><a href="https://www.linkedin.com/in/m%C3%A1rio-j-malta-silva-6b6225207/" target="_blank"> Mário Malta Silva </a></div>
+    <div style="margin: 10px"><a href="https://www.linkedin.com/in/m%C3%A1rio-j-malta-silva-6b6225207/" target="_blank">
+        Mário Malta Silva </a></div>
 
 
 </footer>
