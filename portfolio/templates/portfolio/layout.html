@@ -102,7 +102,7 @@ html, body {
             <a class="linkz" href="{% url 'portfolio:web' %}">Web</a>
             <a class="linkz" style="margin-left: auto" href="{% url 'portfolio:home' %}#aboutMe">About Me</a>
              <a class="linkz" style="margin-left: auto" href="{% url 'portfolio:home' %}#Contactos">Contact</a>
-            
+
 
             {% if not user.is_authenticated %}
             <a class="linkz" style="margin-left: auto" href="{% url 'portfolio:login' %}">Login</a>
