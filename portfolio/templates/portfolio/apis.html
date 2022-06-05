@@ -1,0 +1,25 @@
+{% extends 'portfolio/layout.html' %}
+
+
+{% block main %}
+
+{%  load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/dogs_api.css' %}">
+<body>
+<div class="results">
+	<div id="cat_result" class="result">
+		<p>Random Cat Placeholder</p>
+	</div>
+	<div id="dog_result" class="result">
+		<p>Random Dog Placeholder</p>
+	</div>
+</div>
+
+<div class="buttons">
+	<button id="cat_btn">Get Cat</button>
+	<button id="dog_btn">Get Dog</button>
+</div>
+
+
+
+</body>

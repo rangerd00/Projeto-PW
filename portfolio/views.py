@@ -36,6 +36,10 @@ def home_view(request):
     return render(request, 'portfolio/home.html', context)
 
 
+def apis_view(request):
+    return render(request, 'portfolio/apis.html')
+
+
 def educacao_view(request):
     return render(request, 'portfolio/educacao.html')
 
