@@ -2,6 +2,27 @@
 <html lang="en">
 
 <head>
+        <script>
+
+
+
+
+
+
+
+function realtimeClock(){
+
+    var rtClock = new Date();
+    document.getElementById("tempo").innerHTML = rtClock.getHours() + ":" + rtClock.getMinutes() + ":" + rtClock.getSeconds();
+     var t = setTimeout(realtimeClock, 1000);
+}
+
+
+
+
+
+
+</script>
     <meta charset="UTF-8" name="viewport"  content="width=device-width,initial-scale=1.0
 ">
     {% load static %}
@@ -59,7 +80,7 @@ html, body {
     </style>
     <title>Pagina Inicial</title>
 </head>
-<body>
+<body onload="realtimeClock()">
 
 
 <header >
@@ -126,7 +147,7 @@ html, body {
 
     <div   class="center" >  @ ULHT 2022  </div>
 
-    <div style="padding-right: 60px">  <p id="tempo"> </p> </div>
+    <div style="padding-right: 50px">  <p id="tempo"> </p> </div>
 
             <div style="padding-right: 40px">
 
@@ -141,30 +162,7 @@ html, body {
          <div style="padding-right: 30px">  <a href="{%  url 'portfolio:home'%}" > Home </a>   </div>
 
 
-    <script>
 
-
-
-
-
-
-
-function realtimeClock(){
-
-    var rtClock = new Date();
-    var time = rtClock.getHours() + ":" + rtClock.getMinutes() + ":" + rtClock.getSeconds()
-
-
-    document.getElementById("tempo").innerHTML = time;
-     var t = setTimeout(realtimeClock, 1000);
-}
-
-
-
-
-
-
-</script>
     <div style="margin: 10px" ><a href="https://www.linkedin.com/in/m%C3%A1rio-j-malta-silva-6b6225207/" target="_blank"> Mário Malta Silva </a></div>
 
 
