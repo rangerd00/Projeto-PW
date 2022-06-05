@@ -12,7 +12,7 @@
 </head>
 
 <script>
-	const cat_btn = document.getElementById('cat_btn');
+const cat_btn = document.getElementById('cat_btn');
 const dog_btn = document.getElementById('dog_btn');
 const cat_result = document.getElementById('cat_result');
 const dog_result = document.getElementById('dog_result');
@@ -48,7 +48,7 @@ function getRandomDog() {
 
 {%  load static %}
   <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/dogs_api.css' %}">
-<body onload="getRandomCat(), getRandomDog()"     >
+
 <div class="results">
 	<div id="cat_result" class="result">
 		<p>Random Cat Placeholder</p>
@@ -67,5 +67,5 @@ function getRandomDog() {
 
 
 
+
 {% endblock %}
-</body>
