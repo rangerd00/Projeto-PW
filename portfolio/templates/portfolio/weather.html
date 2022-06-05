@@ -11,43 +11,64 @@
     {%  load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/weather.css' %}"/>
 <script>
+    const input = document.querySelector("#input");
+const city = document.querySelector("#city");
 
-    var weatherData = document.getElementById("weather_data");
-  weatherData.addEventListener('click',function(e){
- e.preventDefault();
- var cityName = document.getElementById("cityName").value;
- var url = "https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid=38440d6588cb8e97791a0a6db25b1f5c";
-  if(cityName == ""){
-      alert("Enter a city name");
-  }else{
-  fetch(url).then(function(response){
-      if(response.ok){
-          return response.json();
-      }else{
-          throw new Error(Error);
-      }
-  }).then(function(data){
-    const html =    `
-        <h2 class="text-danger text-center"><span class="text-dark">City:</span>${data.name}</h2>
-        ` ;
-      document.getElementById("display_data").innerHTML = html;
-  }).catch(function(error){
-      console.log(error);
-  });
-  }
-});
+const cityName = document.querySelector("#cityName");
+const Temp = document.querySelector("#temp");
+const main = document.querySelector("#main");
+const discription = document.querySelector("#discription");
+const image = document.querySelector("#image");
+
+input.onsubmit = (e) => {
+  e.preventDefault();
+  weatherUpdate(city.value);
+  city.value = "";
+};
+
+weatherUpdate = (city) => {
+  const xhr = new XMLHttpRequest();
+  xhr.open(
+    "GET",
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=38440d6588cb8e97791a0a6db25b1f5c`);
+
+
+  xhr.send();
+  xhr.onload = () => {
+    if (xhr.status === 404) {
+      alert("Place not found");
+    } else {
+      var data = JSON.parse(xhr.response);
+      cityName.innerHTML = data.name;
+      Temp.innerHTML = `${Math.round(data.main.temp - 273.15)}°C`;
+      main.innerHTML = data.weather[0].main;
+      discription.innerHTML = data.weather[0].description;
+      image.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    }
+  };
+};
+
+weatherUpdate("Lisbon");
+
+
 </script>
 <body>
 
 
 
-
-<form>
-    <label for="cityName"></label><input type="text" id="cityName" placeholder="Enter a city name"><br>
- <input type="submit" value="Get Weather Information" id="weather_data">
-</form>
-
-<div id="display_data"></div>
+<div class="container">
+  <form id="input">
+    <input type="text" id="city" placeholder="Enter City Name">
+    <input type="submit" value="Get Updates">
+  </form>
+  <div id="weatherContainer">
+    <marquee id="cityName">Patna</marquee>
+    <span id="temp">33°C</span>
+    <span id="main">Cloudy</span>
+    <marquee id="discription">few clouds</marquee>
+    <img id="image" src="https://openweathermap.org/img/wn/02n@2x.png">
+  </div>
+</div>
 
 
   </body>
