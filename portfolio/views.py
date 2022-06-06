@@ -103,6 +103,7 @@ def nova_post_view(request):
     return render(request, 'portfolio/nova.html', context)
 
 
+@login_required
 def nova_tfc_view(request):
     context = {}
     if request.method == 'POST':
