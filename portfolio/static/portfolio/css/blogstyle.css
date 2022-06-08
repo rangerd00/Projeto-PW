@@ -14,6 +14,10 @@ position: relative;
         min-height: 3000px;
 
 
+height: auto;
+width: auto;
+margin-left: auto;
+margin-right: auto;
 
 
   /* Create the parallax scrolling effect */

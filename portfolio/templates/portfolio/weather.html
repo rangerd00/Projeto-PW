@@ -1,5 +1,3 @@
-{% extends 'portfolio/layout.html' %}
-
 {% block style %}
 
 
@@ -10,15 +8,19 @@
 
     {%  load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/weather.css' %}"/>
-<script>
 
-
-</script>
 <body>
 
 
 
+<script>
+    async function getData() {
+        const response = await fetch('test.csv');
+        const data = await response.text();
 
+    }
+
+</script>
 
   </body>
 {% endblock %}
