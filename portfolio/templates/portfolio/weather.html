@@ -9,18 +9,33 @@
     {%  load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/weather.css' %}"/>
 
-<body>
-
-
 
 <script>
-    async function getData() {
-        const response = await fetch('test.csv');
-        const data = await response.text();
+    const key = 'https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/{1020500}.json ';
 
-    }
+
+
+
+
+function getWeather() {
+    fetch("https://api.openweathermap.org/data/2.5/weather?lat=39.106141&lon=39.548280&appid={KEY}&units=metric&lang=tr")
+    .then(response => response.json())
+    .then(data => weatherData = data);
+}
+function setWeather() {
+    document.getElementById("weather_temp").innerHTML = JSON.stringify(weatherData.main.temp);
+}
 
 </script>
+
+
+
+
+<body>
+
+<p> Minimo: <span id="tMin"> </span> <br>
+Maximo: <span id="tMax"> </span></p>
+
 
   </body>
 {% endblock %}
