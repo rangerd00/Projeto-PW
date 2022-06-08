@@ -228,8 +228,7 @@ margin-right: auto;
 	transform: scale(0.8);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
-margin-left: auto;
-margin-right: auto;
+
 }
 .img:hover{
     -webkit-transform: scale(1.3);
