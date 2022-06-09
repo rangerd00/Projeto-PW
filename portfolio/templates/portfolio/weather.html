@@ -1,41 +1,82 @@
-{% block style %}
+{% extends 'portfolio/layout.html' %}
 
+{% block style %}
 
 
 {% endblock style %}
 
+
+
 {% block main %}
-
     {%  load static %}
+
 <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/weather.css' %}"/>
-
-
-<script>
-    const key = 'https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/{1020500}.json ';
-
-
-
-
-
-function getWeather() {
-    fetch("https://api.openweathermap.org/data/2.5/weather?lat=39.106141&lon=39.548280&appid={KEY}&units=metric&lang=tr")
-    .then(response => response.json())
-    .then(data => weatherData = data);
-}
-function setWeather() {
-    document.getElementById("weather_temp").innerHTML = JSON.stringify(weatherData.main.temp);
-}
-
-</script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 
+
+    <!-- Font awsome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+
+
+    <!-- Google fonts link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+    <title>Weather App</title>
+</head>
 
 <body>
+    <div class="center">
+    <div class="container">
+        <div class="input">
+            <label>
+                <input type="text" class="inputValue" placeholder="Enter Location">
+            </label>
+            <button class="button"><i class="fas fa-search"></i></button>
+        </div>
 
-<p> Minimo: <span id="tMin"> </span> <br>
-Maximo: <span id="tMax"> </span></p>
+        <div class="displayWeather">
+            <h1 class="temp">----°C</h1>
+            <p class="desc">---</p>
+        </div>
+
+    </div>
+         </div>
 
 
-  </body>
-{% endblock %}
+    <script >
+        let button = document.querySelector('.button')
+let inputvalue = document.querySelector('.inputValue')
+let nameVal = document.querySelector('.name');
+let temp = document.querySelector('.temp');
+let desc = document.querySelector('.desc');
+
+
+
+button.addEventListener('click', function(){
+
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputvalue.value}&units=metric&appid=fcb4244e74b1beb1b7736fccd4d8eb8e`)
+    .then(response => response.json())
+    .then(
+        displayData)
+    .catch(err => alert('Wrong City name'));
+
+})
+
+
+const displayData=(weather)=>{
+    temp.innerText=`${weather.main.temp}°C`
+    desc.innerText=`${weather.weather[0].main}`
+
+}
+    </script>
+</body>
+{% endblock main %}

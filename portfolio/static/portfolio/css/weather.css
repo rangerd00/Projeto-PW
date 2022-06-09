@@ -1,30 +1,70 @@
+body{
 
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Abel', sans-serif;
-    font-size: large;
-    margin: 0;
-}
-
-#myVideo {
-    width: 100vw;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    object-fit: cover;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
+    margin: 0;
+    background-image: url('https://images.unsplash.com/photo-1550507894-975103845538?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-text {
-    color: rgb(27, 23, 23);
+.container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    max-width: 500px;
+    margin: 1em;
+    padding: 2em;
+    border-radius: 18px;
+    background: rgb(234 234 234);
+    background: rgba(1, 75, 250, 0.4);;
+    color: white;
 }
 
-footer {
-    padding: 10%;
+.input > input {
+    border: none;
+    outline: none;
+    padding: 0.3rem;
+    border-radius: 22px;
+    color: rgb(255 255 255);
+    background: #7c7c7c2b;
+    font-family: 'Raleway', sans-serif;
+}
+
+button.button {
+    border: none;
+    width: 30px;
+    padding: 10px;
+    border-radius: 22px;
+    background: #7c7c7c2b;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+button.button:focus{
+    outline:none;
+}
+
+button.button:hover{
+    border: 1px solid rgb(122, 112, 112)
+}
+
+.displayWeather{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.center {
+
+display: flex;
+
+align-items: center;
 }
