@@ -63,6 +63,14 @@ margin-right: auto;
 
 }
 
+.colorTexto{
+    margin-right: auto;
+    margin-left: auto;
+    color: greenyellow;
+    position: relative;
+
+}
+
 
 
 .titulo2{
@@ -171,7 +179,7 @@ justify-content: center;
 
 
 
-/* Button */
+
 
 	input[type="button"],
 	input[type="submit"],
