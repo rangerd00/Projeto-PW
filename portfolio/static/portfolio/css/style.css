@@ -9,7 +9,7 @@
 
 header {
   height: 10vh;
-  background: #0F1108;
+  background: #000018;
 
  background-repeat: no-repeat;
 background-position: center center;
@@ -52,7 +52,7 @@ footer {
   /* definindo altura e cor */
 
 
-  background: #0F1108;
+  background: #000018;
 
 clear:both;
  background-repeat: no-repeat;
