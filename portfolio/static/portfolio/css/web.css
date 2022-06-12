@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     align-content: center;
-    min-height: 6500px;
+
 
     background-image: url('../images/hologram_scheme_scifi_139294_3840x2160.jpg');
     flex-wrap: wrap;
@@ -13,6 +13,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+   min-height: 600px;
+    width: auto;
 
 
 }
@@ -104,6 +106,20 @@
 
 }
 
+.titulo1{
+      position: relative;
+    top: 6px;
+    right: 1px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 72px;
+    padding: 10px;
+
+
+
+}
 
 .containerweb div:nth-child(19) {
 
