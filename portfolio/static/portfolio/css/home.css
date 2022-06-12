@@ -46,6 +46,7 @@ margin-right: auto;
   top: 5%;
     margin-left: auto;
 margin-right: auto;
+
 }
 
 
@@ -59,16 +60,24 @@ margin-right: auto;
     font-size: 72px;
 margin-left: auto;
 margin-right: auto;
-
+  text-shadow: 5px 5px black;
 
 }
 
 .colorTexto{
     margin-right: auto;
     margin-left: 15%;
-    color: greenyellow;
+    color: white;
     position: relative;
-    padding-left: 20px;
+  padding-top: 2%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+  text-shadow: 5px 5px black;
+    background-color: rebeccapurple;
+  text-align: center;
+    opacity: 0.85;
+border: 1px outset gray;
+margin-bottom: 5%;
 
 
 }
@@ -84,6 +93,7 @@ margin-right: auto;
     font-size: 50px;
 margin-left: auto;
 margin-right: auto;
+      text-shadow: 5px 5px black;
 
 }
 
@@ -140,6 +150,7 @@ margin-right: auto;
     font-size: 50px;
 margin-left: auto;
 margin-right: auto;
+      text-shadow: 5px 5px black;
 
 }
 .titulo4{
@@ -149,6 +160,7 @@ margin-right: auto;
     font-size: 50px;
 margin-left: auto;
 margin-right: auto;
+      text-shadow: 5px 5px black;
 }
 
 .centrartexto{
@@ -194,7 +206,7 @@ justify-content: center;
 		color: #fff !important;
 		text-decoration: none;
 		padding: 0.75em 2.5em 0.75em 2.5em;
-		background-color: #8ebebc;
+		background-color: darkblue;
 		border: 0;
 		cursor: pointer;
 		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("../images/overlay.png");
@@ -214,7 +226,7 @@ justify-content: center;
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #9ececc;
+			background-color: rebeccapurple;
 		}
 
 		input[type="button"]:active,
@@ -222,12 +234,12 @@ justify-content: center;
 		input[type="reset"]:active,
 		button:active,
 		.button:active {
-			background-color: #7eaeac;
+			background-color: dodgerblue;
 		}
 
 
         .img {
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 
 
@@ -237,12 +249,13 @@ justify-content: center;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
             margin-left: 50px;
+            border: 5px white;
 
 
 }
 .img:hover{
-    -webkit-transform: scale(1.3);
-	transform: scale(1.3);
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 
@@ -252,6 +265,8 @@ margin-left: 15%;
             padding-bottom: 30px;
 
              display: block;
+
+    border: 5px  white;
 
 
 }
@@ -266,7 +281,11 @@ margin-left: 15%;
 }
 
 
+.style-img{
+    height:150px;
+    width:150px;
+    border: 2px outset gray;
 
-
+}
 
 
