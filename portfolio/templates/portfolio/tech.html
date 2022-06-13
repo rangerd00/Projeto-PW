@@ -4,10 +4,17 @@
 
 
 
-{% block main %}
+{% block style %}
 
+
+{% endblock style %}
+
+
+
+{% block main %}
     {%  load static %}
 
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/tech.css' %}"/>
 
 <head>
     <meta charset="UTF-8">
