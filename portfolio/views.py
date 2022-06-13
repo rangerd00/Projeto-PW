@@ -9,7 +9,7 @@ import datetime
 from django.urls import reverse
 
 from portfolio.forms import PostForm, TFCForm
-from portfolio.models import Post, Noticias, Tecnologias, Tecnicas, Padroes
+from portfolio.models import Post, Noticias, Tecnologias, Tecnicas, Padroes, TecnologiasInteressantes
 from .models import Quizz
 from .forms import QuizzForm
 from .funcQuizz import draw_graph
@@ -67,6 +67,11 @@ def web_view(reuqest):
     context = {'noticias': Noticias.objects.all(), 'tecnologias': Tecnologias.objects.all(),
                'tecnicas': Tecnicas.objects.all(), 'padroes': Padroes.objects.all()}
     return render(reuqest, 'portfolio/web.html', context)
+
+
+def tech_view(request):
+    context = {'technos': TecnologiasInteressantes.objects.all()}
+    return render(request, 'portfolio/tech.html', context)
 
 
 def login_view(request):

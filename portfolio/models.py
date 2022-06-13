@@ -86,9 +86,21 @@ class Tecnologias(models.Model):
     criador = models.CharField(max_length=200, blank=True)
     logotipo = models.ImageField(upload_to='media/', null=True)
     link = models.URLField(max_length=200, blank=True)
-    caracteristicas = models.CharField(max_length=200,blank=True)
-    onde = models.CharField(max_length=500,blank=True)
+    caracteristicas = models.CharField(max_length=200, blank=True)
+    onde = models.CharField(max_length=500, blank=True)
 
+    def __str__(self):
+        return f"{self.nome}"
+
+
+class TecnologiasInteressantes(models.Model):
+    nome = models.CharField(max_length=200)
+    acronimo = models.CharField(max_length=200, blank=True)
+    ano = models.IntegerField(default=0)
+    criador = models.CharField(max_length=200, blank=True)
+    logotipo = models.ImageField(upload_to='media/', null=True)
+    link = models.URLField(max_length=200, blank=True)
+    caracteristicas = models.CharField(max_length=200, blank=True)
 
     def __str__(self):
         return f"{self.nome}"
