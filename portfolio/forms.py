@@ -200,6 +200,8 @@ class TecnologiasForm(ModelForm):
             'link': 'Insira link',
 
             'caracteristicas': 'Insira as caracteristicas',
+
+            'onde': 'insira onde foi usada'
         }
 
 
