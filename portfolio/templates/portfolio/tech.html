@@ -1,0 +1,63 @@
+{% extends 'portfolio/layout.html' %}
+
+
+
+
+
+{% block main %}
+
+    {%  load static %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <title> Tech!</title>
+</head>
+<body>
+
+<div class="containertech">
+
+<h1 CLASS="centrartexto">Tecnologias Interessantes: </h1>
+
+
+
+    {%  for tech in technos %}
+<div>
+
+    <h3 > {{ tech.nome}}</h3>
+<br>
+    <p>
+{{ tech.acronimo }}
+    </p>
+ <br>
+    <p > {{ tech.ano}}</p>
+
+<br>
+
+       <p > {{ tech.caracteristicas}}</p>
+
+<br>
+    <p > {{ tech.criador}}</p>
+
+    <br>
+
+
+
+     <img src="{{ tech.logotipo.url }}" alt="">
+    <br>
+    <br>
+
+<h3> <a href="{{ tech.link }}"> Leia Aqui!</a></h3>
+
+</div>
+
+
+
+{% endfor %}
+
+ </div>
+
+</body>
+
+
+{% endblock %}
