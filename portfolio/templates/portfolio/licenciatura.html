@@ -350,6 +350,7 @@
 
 
  <h1 class="centrarTexto" >3º Ano | 1º Semestre </h1>
+     <a href="{% url 'portfolio:novouc' %}" >   <button class="button">  Create new UC!!</button> </a>
 
 {% for unidadecurricular in unidades_curriculars  %}
     {% if unidadecurricular.ano == 3 and unidadecurricular.semestre == "1º" %}

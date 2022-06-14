@@ -8,7 +8,7 @@ import datetime
 # Create your views here.
 from django.urls import reverse
 
-from portfolio.forms import PostForm, TFCForm
+from portfolio.forms import PostForm, TFCForm, ProjetosForm
 from portfolio.models import Post, Noticias, Tecnologias, Tecnicas, Padroes, TecnologiasInteressantes
 from .models import Quizz
 from .forms import QuizzForm
@@ -121,6 +121,34 @@ def nova_tfc_view(request):
         context = {'form': form}
 
     return render(request, 'portfolio/novoTFC.html', context)
+
+@login_required
+def nova_projeto_view(request):
+    context = {}
+    if request.method == 'POST':
+        form = ProjetosForm(request.POST or None, request.FILES)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('portfolio:projetos'))
+
+        form = ProjetosForm(request.POST or None, request.FILES)
+        context = {'form': form}
+
+    return render(request, 'portfolio/novoProjeto.html', context)
+
+
+def nova_uc_view(request):
+    context = {}
+    if request.method == 'POST':
+        form = UnidadesCurricularesForm(request.POST or None, request.FILES)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('portfolio:licenciatura'))
+
+        form = UnidadesCurricularesForm(request.POST or None, request.FILES)
+        context = {'form': form}
+
+    return render(request, 'portfolio/novoUC.html', context)
 
 
 @login_required

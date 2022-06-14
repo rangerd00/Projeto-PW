@@ -27,6 +27,9 @@ urlpatterns = [
     path('apis', views.apis_view, name='apis'),
     path('weather', views.weather_view, name='weather'),
     path('tech',views.tech_view, name='tech'),
+    path('novouc', views.nova_uc_view, name ='novouc'),
+    path('novoprojeto',views.nova_projeto_view, name='novoprojeto'),
+
 
 
 
