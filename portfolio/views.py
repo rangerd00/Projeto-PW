@@ -136,7 +136,7 @@ def nova_projeto_view(request):
 
     return render(request, 'portfolio/novoProjeto.html', context)
 
-
+@login_required
 def nova_uc_view(request):
     context = {}
     if request.method == 'POST':
