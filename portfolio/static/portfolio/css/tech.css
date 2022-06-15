@@ -3,7 +3,7 @@
     margin-top: 3%;
     text-align: center;
     vertical-align: center;
-    position: fixed;
+    position: absolute;
     width: 100%;
     left: 0px;
     margin-bottom: 20px;
@@ -11,7 +11,9 @@
 }
 .containertech{
     position: relative;
-   
+    align-items: center;
+    justify-content: space-evenly;
+
 align-content: center;
 display: flex;
 
@@ -24,8 +26,7 @@ display: flex;
 
 
 
-
-        min-height: 5000px;
+height: 10vh;
 
 
 
