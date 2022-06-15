@@ -3,7 +3,7 @@
     margin-top: 3%;
     text-align: center;
     vertical-align: center;
-    position: absolute;
+
     width: 100%;
     left: 0px;
     margin-bottom: 20px;
@@ -21,25 +21,25 @@
     background-size: cover;
 
 
-
-
-
-
-
-
-
-position: relative;
-  display: flex;
-align-content: center;
-     
-
-
    flex-wrap: wrap;
+
+
+
+
+        min-height: 2000px;
+
+
 
 
   /* Create the parallax scrolling effect */
   background-attachment: scroll;
   background-position: center;
+
+
+
+
+
+
 
 
 }
