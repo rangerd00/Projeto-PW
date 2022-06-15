@@ -3,18 +3,17 @@
     margin-top: 3%;
     text-align: center;
     vertical-align: center;
-
+    position: fixed;
     width: 100%;
     left: 0px;
     margin-bottom: 20px;
     color: aliceblue;
 }
 .containertech{
-
-    justify-content: center;
-    align-items: center;
-
-
+    position: relative;
+   
+align-content: center;
+display: flex;
 
     background-image: url('../images/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg');
     background-repeat: no-repeat;
@@ -26,7 +25,7 @@
 
 
 
-        min-height: 10000px;
+        min-height: 5000px;
 
 
 
