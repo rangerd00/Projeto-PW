@@ -1,9 +1,9 @@
 
 .centrartexto{
-    margin-top: 3%;
+    margin-top: 1%;
     text-align: center;
     vertical-align: center;
-    position: absolute;
+    position: relative;
     width: 100%;
     left: 0px;
     margin-bottom: 20px;
@@ -26,7 +26,7 @@ display: flex;
 
 
 
-height: 10vh;
+min-height: 3000px;
 
 
 
