@@ -15,7 +15,8 @@
     align-items: center;
     height: 100vh;
 
-    background-image: url('https://images.unsplash.com/photo-1550507894-975103845538?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+
+    background-image: url('../images/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -24,7 +25,21 @@
 
 
 
-    margin: 0;
+
+
+
+position: relative;
+  display: flex;
+align-content: center;
+        min-height: 2000px;
+
+
+   flex-wrap: wrap;
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
 
 
 }
