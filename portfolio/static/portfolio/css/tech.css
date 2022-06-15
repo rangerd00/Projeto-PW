@@ -27,11 +27,6 @@ display: flex;
 
 
 min-height: 3000px;
-
-
-
-
-  /* Create the parallax scrolling effect */
   background-attachment: scroll;
   background-position: center;
 
