@@ -122,6 +122,7 @@ def nova_tfc_view(request):
 
     return render(request, 'portfolio/novoTFC.html', context)
 
+
 @login_required
 def nova_projeto_view(request):
     context = {}
@@ -135,6 +136,7 @@ def nova_projeto_view(request):
         context = {'form': form}
 
     return render(request, 'portfolio/novoProjeto.html', context)
+
 
 @login_required
 def nova_uc_view(request):
@@ -162,6 +164,9 @@ def edita_post_view(request, blog_post_id):
 
     context = {'form': form, 'blog_post_id': blog_post_id}
     return render(request, 'portfolio/edita.html', context)
+
+
+
 
 
 @login_required
