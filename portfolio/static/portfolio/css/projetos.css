@@ -50,10 +50,9 @@ align-content: center;
 
 }
 
-.zoom {
-transform:scale(2.0);
+.img:hover{
+transform:scale(3.0);
 }
-
 .container2 div{
 
           width: 450px;
