@@ -50,9 +50,7 @@ align-content: center;
 
 }
 
-.img:hover{
-transform:scale(3.0);
-}
+
 .container2 div{
 
           width: 450px;
@@ -137,6 +135,13 @@ align-content: center;
 
 }
 
+.containerTFC img:hover{
+    transform: scale(2.5);
+}
+
+.container img:hover{
+    transform: scale(2.5);
+}
 
 
 
