@@ -50,7 +50,9 @@ align-content: center;
 
 }
 
-
+.zoom {
+transform:scale(2.0);
+}
 
 .container2 div{
 
